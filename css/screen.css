@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin-bottom: 1em;
   font-family: 'Aladin', cursive;
+  font-size: 24px;
 }
 
 p {
