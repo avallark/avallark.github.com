@@ -24,14 +24,23 @@ In this book, we will cover the different aspects of online security that you sh
 
 We will cover the following aspects of security.
 * Understanding security - basics
+
 Computers, Operating systems, Internet, Networking, Identity, Security
+
 * Encrypting your communication
+
 Using SSL/TLS to protect yourself
+
 * Safer Browsing
+
 Anonymous browsing, DNS, Open DNS, Encrypting DNS and why?
+
 * Transactions online
+
 Paypal, Virtual Creditcards, Phishing
+
 * At home security
+
 Securing your wifi, using LAN
 
 ## Understanding Security - basics
