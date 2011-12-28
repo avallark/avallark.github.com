@@ -1,7 +1,7 @@
---
+---
 layout: post
 title: Another Test Post
---
+---
 
 # Another Test Post
 ## Subheader
