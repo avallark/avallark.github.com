@@ -101,6 +101,12 @@ ul.posts {
     font-size: 32px;
 }
 
+.extrasmall {
+
+    font-size: 70%;
+
+}
+
   .site .title a {
     color: #a00;
     text-decoration: none;
