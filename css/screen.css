@@ -94,7 +94,10 @@ ul.posts {
   color: #a00;
   font-weight: bold;
   margin-bottom: 2em;
-  font-size: 32px;
+}
+
+.extrabig {
+    font-size: 32px;
 }
 
   .site .title a {
