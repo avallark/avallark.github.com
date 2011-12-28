@@ -72,7 +72,6 @@ ul.posts {
 
   ul.posts span {
     color: #aaa;
-    /*font-family: Monaco, "Courier New", monospace;*/
     font-family: 'Droid Sans', sans-serif;
     font-size: 90%;
   }
@@ -95,6 +94,7 @@ ul.posts {
   color: #a00;
   font-weight: bold;
   margin-bottom: 2em;
+  font-size: 32px;
 }
 
   .site .title a {
