@@ -23,11 +23,25 @@ We are living in an internet age, everyone has access to everything. Your data a
 In this book, we will cover the different aspects of online security that you should follow to stay safe in this new largely misunderstood world.
 
 We will cover the following aspects of security.
--    Understanding security basics -Computers, Operating systems, Internet, Networking, Identity, Security
--    Encrypting your communication - Using SSL/TLS to protect yourself
--    Safer Browsing - Anonymous browsing, DNS, Open DNS, Encrypting DNS and why?
--    Transactions online - Paypal, Virtual Creditcards, Phishing
--    At home security -Securing your wifi, using LAN
+-    Understanding security basics
+
+Computers, Operating systems, Internet, Networking, Identity, Security
+
+-    Encrypting your communication 
+
+     Using SSL/TLS to protect yourself
+
+-    Safer Browsing
+
+Anonymous browsing, DNS, Open DNS, Encrypting DNS and why?
+
+-    Transactions online 
+
+Paypal, Virtual Creditcards, Phishing
+
+-    At home security 
+
+Securing your wifi, using LAN
 
 ## Understanding Security - basics
 "You do not have to be a geek to know that you need a browser to access the internet" - The IT Crowd
