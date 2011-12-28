@@ -1,3 +1,8 @@
+--- 
+layout: post
+title: {{ post.title}}
+---
+
 # Internet Security - Keeping your family safe on the internet
 
 ## Preface
