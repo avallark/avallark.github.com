@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: {{ post.title}}
+title: Internet Security - Keeping your family safe on the internet
 ---
 
 # Internet Security - Keeping your family safe on the internet
