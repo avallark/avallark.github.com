@@ -6,11 +6,13 @@ title: iPads & Tablets to enrich in-class learning experience
 
 I was in charge of the IESE iPad application that was made to enable distribution of materials, class session slides etc. and enabling them to read and annotate on them. They could potentially share notes and annotations with other classmates. To enable further team work, we decided to use further collaboration tools, that could keep teammates in touch with each other wherever they are.
 
+This was the first application made in this space to be really used in class. [The coverage, we got in FT is here](http://www.ft.com/intl/cms/s/2/c9844f52-35fd-11e0-9b3b-00144feabdc0.html#axzz1gO9YEJ5x)
+
 ## Why am I writing this post?
 Being one of the first pilots in this domain of using Tablets in education, there were several difficulties. Hopefully our experience that is documented here would be of help for others who are trying to use these tablets in classes. Feel free to [get in touch with me](bijur@grep-i.com) if you need my help or guidance in this aspect.
 
 ## Provider
-### Selection of Vendors & Lack of experience
+#### Selection of Vendors & Lack of experience
 Most vendors in this area are small scale. The larger consulting companies have not started making mobile application development a part of their business. Thus typical suppliers of this service are small companies with limited resources, experience and capabilities.
 
 We opted a model of having annotation libraries from iAnnotate and a simple UI integrated with these libraries for the distribution of content.
@@ -21,11 +23,11 @@ On hindsight, and with better experience on portals like [elance](http://elance.
 
 The level of unpreparedness within the organization to distribute content digitally was startingly surprising to us. Our processes were extremely streamlined to print materials, but was hugely inconvenient when it came to using the digital version of the same content.Some of the difficulties were with case formats, copyrights, distribution servers, security etc.
 
-### Case formats
+#### Case formats
 
 We had to debate on the format of the materials. These materials are typically cases and technical notes that forms the core part of our business as a school. Thus we had an infrastructure built around DRM. The digital rights to distribute cases in the electronic format was unavailable and students were allowed to have only paper based cases.
 We analysed .mobi, .epub and pdf as the possible solutions. Creating annotations over the .mobi and .epub formats were the easiest as they were a lot more interactive, but building new libraries from scratch was a daunting task and our supplier was not capable of this. Thus we decided to use pdf as our delivery method. This also helped us to avoid having to convert the already existing pdfs to other formats.
-### Copyrights of Materials
+#### Copyrights of Materials
 
 The pdfs have to have the following conditions as per current agreements with other publishing vendors:
 
@@ -37,7 +39,7 @@ The pdfs have to have the following conditions as per current agreements with ot
 
 As you can imagine some of these restrictions made scalability a very difficult task for us. Since then we have made some improvements in processes and in the way the Application is installed so as to overcome these scalability bottlenecks.
 
-### Automatic distribution of content
+#### Automatic distribution of content
 
 The content has to be automatically available to students instead of student having to download the materials one by one. This involved a huge effort as this required integrations with the course calendar, a server delivering content with 100% uptime and enough storage on the device to store all content, to be able to work offline. The devices also had to be connected with 3G or mobile data as well.
 
@@ -45,7 +47,7 @@ The content has to be automatically available to students instead of student hav
 
 Dealing with the change management in IT itself is huge step. considering we have an ageing IT with old skillsets training them in new technologies was very important task.
 
-### New technology & Project Methodology
+#### New technology & Project Methodology
 
 For IT this is a disruptive change. The technology is new, the skillset is new. The traditional models of managing information is not enough. 
 
@@ -55,12 +57,12 @@ Scrum methodology though unsettling for first time users (our CIO and Project Ma
 
 I will elaborate on the scrum methodology we used to get this project done later. 
 
-### Traditional Support
+#### Traditional Support
 
 The traditional support provides support 08:00 to 19:00 from Monday to Friday.  Without the paper based cases, students when they study need to be able to use the iPads and the applications. The problem is that students in our executive programs study after they get home from work, which is usually after 20:00. Thus support should be available to them after this time. 
 This was impossible for our support organization.
 
-### Collaborative Support through Socialcast
+#### Collaborative Support through Socialcast
 
 [Socialcast](http://socialcast.com) is a twitter like microblogging platform where all the employees of a company share debates, work updates and issues. 
 
