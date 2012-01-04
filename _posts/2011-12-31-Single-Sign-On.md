@@ -16,13 +16,11 @@ IESE for instance is one of them. So the first thing I did whe I accepted this j
 * User classification
 * Identifying the different organisations within which the authentication must happen
 * Inventorying the applications that must do SSO.
-
-> - which users within the aplications should use SSO.
-> - what mode of authentication is best
-
->> - web
->> - kerberos
->> - direct
+>  Which users within the aplications should use SSO.
+>  What mode of authentication is best
+> >  Web
+> >  Kerberos
+> >  Direct
 
 * Product selection
 * Preparing infrastructure
