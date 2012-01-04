@@ -1,4 +1,10 @@
-# Single Sign On
+---
+layout: post
+title: Single Sign On - Implementation Guide
+author: Abdul Bijur Vallarkodath
+---
+
+# Single Sign On - CAS Implementation Guide
 
  The capability of single sign on seems to be a very basic infrastructural requireme for any organisation, yet the number of companies without a functioning sso is amazingly high.
 
