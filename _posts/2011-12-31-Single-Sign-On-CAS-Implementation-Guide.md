@@ -78,7 +78,8 @@ Edit your application php file to include the following.
         phpCAS::logout();
 	}
 	if (phpCAS::isAuthenticated()) {
-		$name = phpCAS::getUser(); //This is the variable that has the name. You could use this further in your program.
+		$name = phpCAS::getUser(); //This is the variable that has the name. 
+		// You could use this further in your program.
 	// And the program can continue for authenticated users with $name.
 	
 
