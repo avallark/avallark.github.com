@@ -41,6 +41,6 @@ One thing to understand is that CAS provides authenticaton. You can configure it
 
 Img
 
-The application if it wants more user information, needs to have a service account in your LDAP with read rights over the respective user accounts. 
+The application if it wants more user information, needs to have a service account in your LDAP with read-rights over the respective user accounts. 
 
 Once the user has logged in to the application using CAS now the application can safely connect to the LDAP with the service user account and get more information and decide what to do with the user.
