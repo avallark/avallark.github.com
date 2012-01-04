@@ -100,7 +100,5 @@ Then go to your application php and it will redirect you to CAS for Authenticati
 
 You could find more examples and solutions on the [CAS wiki](http://www.jasig.org/cas/client-integration).
 
-
-
-	
+More to follow..
 
