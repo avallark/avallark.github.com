@@ -8,9 +8,9 @@ author: Abdul Bijur Vallarkodath
 
 ## Introduction
 
-The Education strategy of IESE would involve various products, solutions that are to be pieced together in harmony to provide a seamless education experience for students and professors. The complete solution and design would depend on the learning strategy and how professors decide that they need to teach. 
+The Education strategy of a school would involve various products, solutions that are to be pieced together in harmony to provide a seamless education experience for students and professors. The complete solution and design would depend on the learning strategy and how professors decide that they need to teach. 
 
-The first step into designing and implementing a new LMS is what learning strategy we need to follow for our courses within IESE. 
+The first step into designing and implementing a new LMS is what learning strategy we need to follow for our courses within a school. 
 
 Selecting a LMS should be done only after answering these three questions. 
 
@@ -53,7 +53,7 @@ Apart from resolving the issues of the current platform, we need the following f
 2. Ability to do distance learning or eLearning effectively
 Traditionally we have been a program with a heavy focus on in-person training. Case based methodology to a big extent requires this. 
 
-With GEMBA, we have distance learning modules focused on conducting a case based discussion using newsgroups. The newsgroups had several significant considerations:
+We have distance learning modules focused on conducting a case based discussion using newsgroups. The newsgroups had several significant considerations:
 
 1. Replicate classroom discussions on an online asynchronous platform.
 2. Discussion should persist over a period of time
@@ -66,7 +66,7 @@ With GEMBA, we have distance learning modules focused on conducting a case based
 9. Nested replies and multi-level threads are great. It also allows two people to argue/debate something out, without hindering others (unlike a class discussion)
 10. The newsgroups are significant investment of professor time.
 
-Thus, eLearning platforms, must strive to enable an offline classroom discussions and help aid in the case based methodology that IESE is built on.
+Thus, eLearning platforms, must strive to enable an offline classroom discussions and help aid in the case based methodology that a school is built on.
 
 Distance learning platforms should also be quick courses we could deliver as a course pills. With its own Content and (maybe) and exam to verify appropriateness. These are especially attractive for soft skill course like Company Ethics etc. Quick course in Accounting principles of quantitative methods. These pills could contain multimedia material, video, audio and text along with an interactive element attached to it.
 
@@ -84,7 +84,7 @@ An LMS should enable the distribution of content digitally to users in a way suc
 
 ## The LMS should allow the following
 
-1. IESE Back-office staff to upload and organize the content integrated with the current systems that are used to deliver content.
+1. a school Back-office staff to upload and organize the content integrated with the current systems that are used to deliver content.
 2. Professors should need to update any content on their sessions at any time to allow flexibility. e.g. new article in today’s newspaper, change in case etc.
 3. Relevant content access. People with the right permissions can update, create content for courses. 
 
@@ -150,16 +150,16 @@ Simulations are used to aid teaching in various courses. Examples include the be
 
 Current Identified needs include the following:
 1. Simulation of the Beer Game.
-2. In Company Project for GEMBA.
+2. In Company Projects, off-campus classes etc.
 
-## Key Issues at IESE we want to tackle 
+## Key Issues at a school we want to tackle 
 
 Issues we need to consider
 
 1. Security for our content.
 2. Content have to be always:
 1. Password protected
-2. Contain a social watermark (e.g. “This content is delivered to EMBA 2010 - Section B”) 
+2. Contain a social watermark (e.g. “This content is delivered to MBA 2010 - Section B”) 
 1. Ease of access through multiple platforms, through open protocols
 2. Ability to let consumerism take its way. Let the open market guide users to selecting applications they prefer.
 
