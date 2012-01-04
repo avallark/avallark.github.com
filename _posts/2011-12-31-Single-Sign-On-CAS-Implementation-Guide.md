@@ -67,7 +67,7 @@ Using PHP, the supported client is [PHPCas](https://wiki.jasig.org/display/CASC/
 Download PHPCas to a directory that can be accessed by the PHP page. Copy the certificate of the server x509.pem and save it to a directory cert_directory within reach. Also create a db schema (if required). 
 
 Edit your application php file to include the following.
-	{% 
+	 
 	include_once('cas/config.php');
 	include_once($phpcas_path.'/CAS.php');
 	phpCAS::setDebug();
@@ -80,12 +80,12 @@ Edit your application php file to include the following.
 	if (phpCAS::isAuthenticated()) {
 		$name = phpCAS::getUser(); //This is the variable that has the name. You could use this further in your program.
 	// And the program can continue for authenticated users with $name.
-	%}
+	
 
 Use the config.php file that we included (the file can be found within PHPCas directory under examples) and add in the configuration details like host, db etc.
 
 If your CAS url is something like : https://login.example.com/cas
-{%
+
 	$cas_host = 'login.example.com'
 	$cas_context = '/cas';
 	$cas_port = 443; // This will be the port of the initial server, not the catalina port.
@@ -94,7 +94,7 @@ If your CAS url is something like : https://login.example.com/cas
 	$db_user = 
 	$db_password = 
 	$db_table = 
-%}
+
 
 Then go to your application php and it will redirect you to CAS for Authentication.
 
