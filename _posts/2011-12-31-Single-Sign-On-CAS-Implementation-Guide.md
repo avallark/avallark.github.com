@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Single Sign On - Implementation Guide
+title: Single Sign On - CAS Implementation Guide
 author: Abdul Bijur Vallarkodath
 ---
 
@@ -27,11 +27,11 @@ I will go through each of these steps that we followed and why?
 
 ## Why Single Sign On
 
-**Before SSO** the user experience within your organization looks somewhat like this.
+*Before SSO* the user experience within your organization looks somewhat like this.
 
 ![Multiple logins and multiple accounts](/work/cas/BeforeSSO.png "Before SSO")
 
-**After SSO** the user experience _could possibly_ be something like this.
+*After SSO* the user experience _could possibly_ be something like this.
 
 ![Single login and one time entry](/work/cas/AfterSSO.png "After SSO")
 
