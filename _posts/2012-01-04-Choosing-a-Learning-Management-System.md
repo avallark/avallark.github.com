@@ -35,6 +35,7 @@ We must address the following with this new LMS
 5. Ability to do distance learning and eLearning effectively.
 6. Simulations and Aids to teaching
 
+
 ## Course management for Faculty and students
 
 The current solution of Global campus using sharepoint leaves much to be desired. The concerns are
