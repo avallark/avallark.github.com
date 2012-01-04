@@ -35,8 +35,10 @@ We must address the following with this new LMS
 5. Ability to do distance learning and eLearning effectively.
 6. Simulations and Aids to teaching
 
-# Course management for Faculty and students
-The current solution of Global campus using sharepoint leaves much to be desired. The concerns include:
+## Course management for Faculty and students
+
+The current solution of Global campus using sharepoint leaves much to be desired. The concerns are
+
 1. There are over 800 live independant sites on sharepoint for Global campuses with no central control
 2. Usability of content is very low
 3. Cost of redesigning and recreating a new sharepoint site is very high and this cost climbs each year with more custom programs.
