@@ -99,7 +99,13 @@ If your CAS url is something like : https://login.example.com/cas
 
 Then go to your application php and it will redirect you to CAS for Authentication.
 
-You could find more examples and solutions on the [CAS wiki](http://www.jasig.org/cas/client-integration).
+You could find more examples and other client integrations on the [CAS wiki](http://www.jasig.org/cas/client-integration).
 
-More to follow..
+To get more information from the LDAP now you can use this $name to query information. An example is given below (Will be updated)
+
+## User Management
+
+One of the things to consider while integrating your application with Single Sign On is the which users of the applications need the single sign on. Usually organizations get so lost in the frantic single-sign-on-paranoia that they issue mandates to application teams to integrate all users with SSO in all cases. 
+
+The general rule of thumb policy to follow would be to give your *customers* a single sign on. Administration & staff can use special administrative logins and letting them login multiple times is not an issue. SSO should be for your customers. So when the customer clicks on the login button of your website, take them to the SSO. Have a separate url (like example.com/admin/) for the admin and staff logins. This also makes it easier for application developers to have a separate area for admin & staff.
 
