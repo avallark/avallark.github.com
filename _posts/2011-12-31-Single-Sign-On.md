@@ -41,13 +41,13 @@ An example of the server configuration file is [available here](http://github.co
 
 One thing to understand is that CAS provides authenticaton. You can configure it such that it will return a few LDAP attributes like email id, username etc. CAS also retains the user session so as to provide a single sign on experience. The scope ends there. Application designers have come to me with extremely weird requirements from the SSO because they were able to get all these information and access details directly from the Active Directory. This is not why CAS was made. CAS was made as your first door to the application. The apications that are going to use CAS need to follow this design.
 
-**Before SSO** the user experience within your organization looks somewhat like this:
+**Before SSO** the user experience within your organization looks somewhat like this.
 
-[Multiple logins and multiple accounts](/work/cas/BeforeSSO.png "Before SSO")
+![Multiple logins and multiple accounts](/work/cas/BeforeSSO.png "Before SSO")
 
-**After SSO** the user experience _could possibly_ be something like this:
+**After SSO** the user experience _could possibly_ be something like this.
 
-[Single login and one time entry](/work/cas/AfterSSO.png "After SSO")
+![Single login and one time entry](/work/cas/AfterSSO.png "After SSO")
 
 The application if it wants more user information, needs to have a service account in your LDAP with read-rights over the respective user accounts. 
 
