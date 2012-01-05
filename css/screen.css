@@ -91,7 +91,7 @@ ul.posts {
   line-height: 1.5em;
 }
 
-#posts ul,li {
+#listPosts ul,li {
     list-style-type: none;
 }
 
