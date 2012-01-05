@@ -32,8 +32,9 @@ For a server that you used to login into, use the keys above to enable passwordl
 	$ cat ~/.ssh/id_rsa.pub 
 
 This will output something similar to this
-	ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEArkwv9X8eTVK4F7pMlSt45pWoiakFkZMw
-	G9BjydOJPGH0RFNAy1QqIWBGWv7vS5K2tr+EEO+F8WL2Y/jK4ZkUoQgoi	+n7DWQVOHsR ijcS3LvtO		+50Np4yjXYWJKh29JL6GHcp8o7+YKEyVUMB2CSDOP99eF9g5Q0d+1U2WVdB WQM= 	raman@ramantePC
+	ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEArkwv9X8eTVK4F7pMl 
+	St45pWoiakFkZMw G9BjydOJPGH0RFNAy1QqIWBGWv7vS5K2tr+EEO+F8WL2Y 	jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
+	+YKEyVUMB2CSDOP99eF9g5Q0d+1U2WVdB WQM=raman@ramantePC
 
 It is one line in length. 
 
