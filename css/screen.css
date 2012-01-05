@@ -68,7 +68,6 @@ ul.posts {
 
   ul.posts li {
     line-height: 1.75em;
-    list-style-type: none;
   }
 
   ul.posts span {
@@ -76,6 +75,7 @@ ul.posts {
     font-family: 'Droid Sans', sans-serif;
     font-size: 90%;
   }
+
 
 /*****************************************************************************/
 /*
@@ -106,6 +106,7 @@ ul.posts {
 
     font-size: 70%;
     color: #ccc;
+    width: 100px;
 }
 
   .site .title a {
