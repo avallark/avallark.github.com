@@ -91,15 +91,6 @@ ul.posts {
   line-height: 1.5em;
 }
 
-
-#listPosts ul{
-    list-style-type: none;
-}
-
-#listPosts li{
-    list-style-type: none;
-}
-
 .title {
   color: #a00;
   font-weight: bold;
