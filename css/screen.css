@@ -110,6 +110,7 @@ li.listPosts {
     color: #ccc;
     font-size: 90%;
     margin-bottom: 3em;
+    align: right;
 }
 
 .MainPageText {
