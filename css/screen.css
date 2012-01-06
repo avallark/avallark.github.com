@@ -61,12 +61,9 @@ table {
 /*
 /*****************************************************************************/
 
-ul.content {
-list-style-type: none;
-}
 
 ul.posts {
-  /*list-style-type: none;*/
+  list-style-type: none;
   margin-bottom: 2em;
 }
 
@@ -79,6 +76,7 @@ ul.posts {
     font-family: 'Droid Sans', sans-serif;
     font-size: 90%;
   }
+
 
 
 /*****************************************************************************/
