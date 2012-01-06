@@ -44,6 +44,8 @@ While I was creating this, I realised that this is a good way of trying to provi
 If you have some time, rather than wasting it on tv, [make yourself interesting](http://www.forbes.com/sites/jessicahagy/2011/11/30/how-to-be-interesting/) use it to contribute to this project. Your efforts would be greatly appreciated by the millions of kids in India who will be helped by this deed of yours.
 
 
+If you have unmerged pdf files, you can also contribute by uploading them to the directory called "unmerged". I will merge them as soon as I can.
+
 #### A note about copyrights
 All copyright belongs to NCERT. I only function as a facilitator and do not own any copyright. We thank NCERT for making these textbooks available in the public domain.
 
