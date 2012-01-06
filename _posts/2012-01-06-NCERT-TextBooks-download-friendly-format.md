@@ -6,6 +6,8 @@ author: Abdul Bijur Vallarkodath
 
 # NCERT Textbooks in a download friendly format.
 
+First things first, the [Project is available on Github](https://github.com/avallark/NCERT-TextBooks).
+
 A friend of mine was preparing for the UPSC services examination and he asked my help to locate the NCERT textbooks as that is a good place to start preparing. I found the NCERT website quite fast, but found out that downloading these files from the website is a pain. They make each chapter a separate pdf and cover pages jpg formats. All in all you have to download 20 files if you want to read a text book.
 
 Thus, I started a project so as to unify these pdf files into a single more human-form pdf. The pdf would thus be a complete ebook for one subject of NCERT. To do this, I needed three things
