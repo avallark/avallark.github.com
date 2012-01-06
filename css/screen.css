@@ -103,13 +103,13 @@ li.listPosts {
 .title {
   color: #a00;
   font-weight: bold;
-  margin-bottom: 3em;
   border-bottom: 2px solid #eee;
 }
 
 .slogan {
     color: #ccc;
-    font-size: 120%
+    font-size: 120%;
+    margin-bottom: 3em;
 }
 
 .MainPageText {
