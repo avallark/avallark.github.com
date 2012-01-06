@@ -92,11 +92,11 @@ ul.posts {
 }
 
 
-ul.listPosts {
+#listPosts ul{
     list-style-type: none;
 }
 
-li.listPosts {
+#listPosts li{
     list-style-type: none;
 }
 
