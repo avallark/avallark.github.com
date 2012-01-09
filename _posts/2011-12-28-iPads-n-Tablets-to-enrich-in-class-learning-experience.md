@@ -9,7 +9,7 @@ I was in charge of the IESE iPad application that was made to enable distributio
 This was the first application made in this space to be really used in class. [The coverage, we got in FT is here](http://www.ft.com/intl/cms/s/2/c9844f52-35fd-11e0-9b3b-00144feabdc0.html#axzz1gO9YEJ5x)
 
 ## Why am I writing this post?
-Being one of the first pilots in this domain of using Tablets in education, there were several difficulties. Hopefully our experience that is documented here would be of help for others who are trying to use these tablets in classes. Feel free to [get in touch with me](bijur@grep-i.com) if you need my help or guidance in this aspect.
+Being one of the first pilots in this domain of using Tablets in education, there were several difficulties. Hopefully our experience that is documented here would be of help for others who are trying to use these tablets in classes. Feel free to [get in touch with me](mailto:bijur@grep-i.com) if you need my help or guidance in this aspect.
 
 ## Provider
 #### Selection of Vendors & Lack of experience
