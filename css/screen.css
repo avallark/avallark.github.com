@@ -24,6 +24,49 @@ body {
   text-align: center;
 }
 
+/* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+@font-face {
+    font-family: 'MuseoSans500';
+    src: url('fonts/MuseoSans_500-webfont.eot');
+    src: url('fonts/MuseoSans_500-webfont.eot?iefix') format('eot'),
+         url('fonts/MuseoSans_500-webfont.woff') format('woff'),
+         url('fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+         url('fonts/MuseoSans_500-webfont.svg#webfontkQkWxTED') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ComfortaaThin';
+    src: url('fonts/Comfortaa_Thin-webfont.eot');
+    src: url('fonts/Comfortaa_Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Comfortaa_Thin-webfont.woff') format('woff'),
+         url('fonts/Comfortaa_Thin-webfont.ttf') format('truetype'),
+         url('fonts/Comfortaa_Thin-webfont.svg#ComfortaaThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ComfortaaRegular';
+    src: url('fonts/Comfortaa_Regular-webfont.eot');
+    src: url('fonts/Comfortaa_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Comfortaa_Regular-webfont.woff') format('woff'),
+         url('fonts/Comfortaa_Regular-webfont.ttf') format('truetype'),
+         url('fonts/Comfortaa_Regular-webfont.svg#ComfortaaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||               Your styles !                  ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
 }
