@@ -18,6 +18,8 @@ The electromagnetic spectrum extends from low frequencies used for modern radio 
 
 The lower frequency range is used for Radio waves which are used for mobile communications. At any frequency, by constantly modifying the electrical or magnetic properties of the radiation, messages can be transmitted. 
 
+## Mobile communication using EMR
+
 Let us assume that a person A wants to send a message to a person B. Person A choses a particular frequency lets say 3.122 x 10^4 (or 31.22 KHz) to transmit the message. The person, then with a device, lets call it an encoder, encodes his message into a series of changes at the particular frequency. By changing the electrical and/or magnetic properties of this particular frequency a coded message can be transmitted. Person B can simply listen to this exact frequency of 31.22 kHz and use a 'decoder' to convert these variations in electrical and magnetic properties into a human understandable form. Thus A has used a particular point on the electro magnetic spectrum to communicate with person B. 
 
 This is exactly how we use our mobile phones to communicate with each other. The encoding and decoding I mentioned in the above paragraph is the different methods of transfering a human understandable message into electric and/or magnetic variations that the wave can carry and decoding is the method of converting them back. Such a device would be your mobile phones. 
