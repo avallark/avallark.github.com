@@ -36,11 +36,11 @@ There are several methods used to do this encoding and decoding. They are 1G, GS
 
 ### GSM (Global System for Mobile Communication)
 
-GSM (Global System for Mobile Communications, originally Groupe Spécial Mobile), is a *standard set* developed by the European Telecommunications Standards Institute (ETSI) to describe technologies for second generation (2G) digital cellular networks. Developed as a replacement for first generation (1G) analog cellular networks, the GSM standard originally described a digital, circuit switched network optimized for full duplex voice telephony. The standard was expanded over time to include first circuit switched data transport, then packet data transport via GPRS (General Packet Radio Services). Packet data transmission speeds were later increased via EDGE (Enhanced Data rates for GSM Evolution) referred as EGPRS. The GSM standard is more improved after the development of third generation (3G) UMTS standard developed by the 3GPP. GSM networks will evolve further as they begin to incorporate fourth generation (4G) LTE Advanced standards. "GSM" is a trademark owned by the GSM Association.
+GSM (Global System for Mobile Communications, originally Groupe Spécial Mobile), is a **standard set** developed by the European Telecommunications Standards Institute (ETSI) to describe technologies for second generation (2G) digital cellular networks. Developed as a replacement for first generation (1G) analog cellular networks, the GSM standard originally described a digital, circuit switched network optimized for full duplex voice telephony. The standard was expanded over time to include first circuit switched data transport, then packet data transport via GPRS (General Packet Radio Services). Packet data transmission speeds were later increased via EDGE (Enhanced Data rates for GSM Evolution) referred as EGPRS. The GSM standard is more improved after the development of third generation (3G) UMTS standard developed by the 3GPP. GSM networks will evolve further as they begin to incorporate fourth generation (4G) LTE Advanced standards. "GSM" is a trademark owned by the GSM Association.
 
 ### General Packet Radio Service (GPRS)
 
-General packet radio service (GPRS) is a packet oriented mobile data service on the 2G and 3G cellular communication system's (GSM). GPRS was originally standardized by European Telecommunications Standards Institute (ETSI). It is a *service* provided with GSM technologies of mobile communications.
+General packet radio service (GPRS) is a packet oriented mobile data service on the 2G and 3G cellular communication system's (GSM). GPRS was originally standardized by European Telecommunications Standards Institute (ETSI). It is a **service** provided with GSM technologies of mobile communications.
 
 ### 3G 
 
@@ -58,13 +58,13 @@ One of the concepts in data communication is the idea of allowing several transm
 
 Wi-Fi  is a popular technology that allows an electronic device to exchange data wirelessly (using radio waves) over a computer network, including high-speed Internet connections. The Wi-Fi Alliance defines Wi-Fi as any "wireless local area network (WLAN) products that are based on the Institute of Electrical and Electronics Engineers' (IEEE) 802.11 standards". However, since most modern WLANs are based on these standards, the term "Wi-Fi" is used in general English as a synonym for "WLAN".
 
-A device that can use Wi-Fi (such as a personal computer, video game console, smartphone, tablet, or digital audio player) can connect to a network resource such as the Internet via a wireless network access point. Such an access point (or hotspot) has a *range of about 20 meters* (65 feet) indoors and a greater range outdoors. Hotspot coverage can comprise an area as small as a single room with walls that block radio waves or as large as many square miles — this is achieved by using multiple overlapping access points.
+A device that can use Wi-Fi (such as a personal computer, video game console, smartphone, tablet, or digital audio player) can connect to a network resource such as the Internet via a wireless network access point. Such an access point (or hotspot) has a **range of about 20 meters** (65 feet) indoors and a greater range outdoors. Hotspot coverage can comprise an area as small as a single room with walls that block radio waves or as large as many square miles — this is achieved by using multiple overlapping access points.
 
 Wifi is usually protected by encryption mechanisms like the WEP/WPA/WPA2/802.11 and other standards in order to prevent unauthorized access.
 
 ### Wimax
 
-WiMAX (Worldwide Interoperability for Microwave Access) is a wireless communications standard designed to provide 30 to 40 megabit-per-second data rates, with the 2011 update providing up to 1 Gbit/s for fixed stations. It is a part of a “fourth generation,” or 4G, of wireless-communication technology. WiMax far surpasses the 30-metre (100-foot) wireless range of a conventional Wi-Fi local area network (LAN), offering a metropolitan area network with a signal radius of about *50 km*. The name "WiMAX" was created by the WiMAX Forum, which was formed in June 2001 to promote conformity and interoperability of the standard. The forum describes WiMAX as "a standards-based technology enabling the delivery of last mile wireless broadband access as an alternative to cable and DSL". WiMax offers data-transfer rates that can be superior to conventional cable-modem and DSL connections, however, the bandwidth must be split among multiple users and thus yields lower speeds in practice.
+WiMAX (Worldwide Interoperability for Microwave Access) is a wireless communications standard designed to provide 30 to 40 megabit-per-second data rates, with the 2011 update providing up to 1 Gbit/s for fixed stations. It is a part of a “fourth generation,” or 4G, of wireless-communication technology. WiMax far surpasses the 30-metre (100-foot) wireless range of a conventional Wi-Fi local area network (LAN), offering a metropolitan area network with a signal radius of about **50 km**. The name "WiMAX" was created by the WiMAX Forum, which was formed in June 2001 to promote conformity and interoperability of the standard. The forum describes WiMAX as "a standards-based technology enabling the delivery of last mile wireless broadband access as an alternative to cable and DSL". WiMax offers data-transfer rates that can be superior to conventional cable-modem and DSL connections, however, the bandwidth must be split among multiple users and thus yields lower speeds in practice.
 
 Remember wimax is a Local area wireless connection. Though the range is now at 50km, it still is more closer to your wifi at home than the Mobile communication standards of 3G.
 
@@ -74,9 +74,9 @@ Remember wimax is a Local area wireless connection. Though the range is now at 5
 
 The world's first publicly available LTE service was launched by TeliaSonera in Oslo and Stockholm on 14 December 2009. LTE is the natural upgrade path for carriers with GSM/UMTS networks, but even CDMA holdouts such as Verizon Wireless, who launched the first large-scale LTE network in North America in 2010, and au by KDDI in Japan have announced they will migrate to LTE. LTE is, therefore, anticipated to become the first truly global mobile phone standard, although the use of different frequency bands in different countries will mean that only multi-band phones will be able to utilize LTE in all countries where it is supported.
 
+### Nearfield wireless communication using Bluetooth
 
-
-
+Bluetooth is a proprietary open wireless technology standard for exchanging data over **short distances** (using short-wavelength radio transmissions in the ISM band from 2400–2480 MHz) from fixed and mobile devices, creating personal area networks (PANs) with high levels of security. Created by telecoms vendor Ericsson in 1994, it was originally conceived as a wireless alternative to RS-232 data cables. It can connect several devices, overcoming problems of synchronization.
 
 
 _Most of the data in this article is from Wikipedia. The purpose of this article is to aggregate information for educational purposes_
