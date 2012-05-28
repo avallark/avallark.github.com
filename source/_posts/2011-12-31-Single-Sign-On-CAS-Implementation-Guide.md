@@ -1,10 +1,8 @@
 ---
-layout: page
-title: "Single Sign On - CAS Implementation Guide"
-date: 2012-05-28 23:18
+layout: post
+title: Single Sign On - CAS Implementation Guide
 comments: true
-sharing: true
-footer: true
+categories: work, product manager, architect, IT strategy
 ---
 
  The capability of single sign on seems to be a very basic infrastructural requireme for any organisation, yet the number of companies without a functioning sso is amazingly high.
