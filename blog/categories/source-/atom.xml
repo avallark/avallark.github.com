@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: source, | My work and thoughts]]></title>
+  <link href="http://avallark.github.com/blog/categories/source-/atom.xml" rel="self"/>
+  <link href="http://avallark.github.com/"/>
+  <updated>2012-05-28T23:46:28+02:00</updated>
+  <id>http://avallark.github.com/</id>
+  <author>
+    <name><![CDATA[Bijur Vallarkodath]]></name>
+    <email><![CDATA[bijur@grep-i.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NCERT Textbooks in a download friendly format.]]></title>
+    <link href="http://avallark.github.com/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/"/>
+    <updated>2012-01-06T00:00:00+01:00</updated>
+    <id>http://avallark.github.com/blog/2012/01/06/NCERT-TextBooks-download-friendly-format</id>
+    <content type="html"><![CDATA[<p>First things first, the <a href="https://github.com/avallark/NCERT-TextBooks">Project is available on Github</a>.</p>
+
+<p>A friend of mine was preparing for the UPSC services examination and he asked my help to locate the NCERT textbooks as that is a good place to start preparing. I found the NCERT website quite fast, but found out that downloading these files from the website is a pain. They make each chapter a separate pdf and cover pages jpg formats. All in all you have to download 20 files if you want to read a text book.</p>
+
+<p>Thus, I started a project so as to unify these pdf files into a single more human-form pdf. The pdf would thus be a complete ebook for one subject of NCERT. To do this, I needed three things</p>
+
+<ul>
+<li>a tool to download these files easily : wget</li>
+<li>a tool to combine these pdfs into a single file : gs (ghostscript)</li>
+<li>a tool to convert jpg to pdfs : ghostscript/ImageMagik</li>
+</ul>
+
+
+<p>All these tools are free open source tools that can be used. So I created two scripts jpg2pdf and compdf to ease their usage.</p>
+
+<p><em>compdf</em> takes in two arguments, 1st is the final pdf name e.g. 8th-Maths.pdf, and the second is the list of pdf file to be merged. The order that is given here is important.</p>
+
+<p>usage:</p>
+
+<pre><code>    compdf "Final pdf name" "coverpage.pdf hesc10?.pdf hesc11?.pdf hesc1an.pdf"
+</code></pre>
+
+<p>e.g.</p>
+
+<pre><code>    compdf "9th-Science-Problems.pdf" "ieep1cc.pdf ieep1ps.pdf ieep10?.pdf ieep11?.pdf ieep1a?.pdf"
+</code></pre>
+
+<p><em>jpg2pdf</em> is required as compdf can only merge pdfs and some coverpages are given in jpg files. so you will need to convert them to pdf.</p>
+
+<p>usage:</p>
+
+<pre><code>    jpg2pdf JPEG-Filename.jpg PDF-Filename.pdf 
+</code></pre>
+
+<p><em>Note, most probably the jpg2pdf will error out on your computer because of the location of the viewjpeg.ps file on your computer. It will be different on your computer so use locate or find to find this file and then replace the path to that file in the jpg2pdf script.</em></p>
+
+<p>These both tools are also added in the scripts folder of the project.</p>
+
+<p>I used these tools and have uploaded a few textbooks, mostly those relevant to the UPSC civil services examinations.So folks who are preparing for it, can download the complete textbooks from this website.</p>
+
+<h2>Plea to contribute</h2>
+
+<p>While I was creating this, I realised that this is a good way of trying to provide a way for people to easily download pdf files directly to their computers, without having to worry about merging the pdfs etc. I have provided you with all the tools you will need, in the scripts folder.</p>
+
+<p>If you have some time, rather than wasting it on tv, <a href="http://www.forbes.com/sites/jessicahagy/2011/11/30/how-to-be-interesting/">make yourself interesting</a> use it to contribute to this project. Your efforts would be greatly appreciated by the millions of kids in India who will be helped by this deed of yours.</p>
+
+<p>If you have unmerged pdf files, you can also contribute by uploading them to the directory called "unmerged". I will merge them as soon as I can.</p>
+
+<h4>A note about copyrights</h4>
+
+<p>All copyright belongs to NCERT. I only function as a facilitator and do not own any copyright. We thank NCERT for making these textbooks available in the public domain.</p>
+]]></content>
+  </entry>
+  
+</feed>
