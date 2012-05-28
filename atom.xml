@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[My work and thoughts]]></title>
   <link href="http://avallark.github.com/atom.xml" rel="self"/>
   <link href="http://avallark.github.com/"/>
-  <updated>2012-05-28T23:06:06+02:00</updated>
+  <updated>2012-05-28T23:14:14+02:00</updated>
   <id>http://avallark.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Bijur Vallarkodath]]></name>
+    <email><![CDATA[bijur@grep-i.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
