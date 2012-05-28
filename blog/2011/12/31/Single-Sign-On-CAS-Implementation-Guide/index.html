@@ -9,7 +9,7 @@
   <meta name="author" content="Bijur Vallarkodath">
 
   
-  <meta name="description" content="Single Sign on - CAS Implementation Guide May 28th, 2012 The capability of single sign on seems to be a very basic infrastructural requireme for any &hellip;">
+  <meta name="description" content="Single Sign On - CAS Implementation Guide The capability of single sign on seems to be a very basic infrastructural requireme for any organisation, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avallark.github.com/single-sign-on">
+  <link rel="canonical" href="http://avallark.github.com/blog/2011/12/31/Single-Sign-On-CAS-Implementation-Guide">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,11 +63,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Single Sign on - CAS Implementation Guide</h1>
-    <p class="meta">
+    
+      <h1 class="entry-title">Single Sign on - CAS Implementation Guide</h1>
+    
+    
+      <p class="meta">
+        
 
 
 
@@ -79,10 +83,16 @@
   
 
 
-<time datetime="2012-05-28T23:18:00+02:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time></p>
+<time datetime="2011-12-31T00:00:00+01:00" pubdate data-updated="true">Dec 31<span>st</span>, 2011</time>
+        
+      </p>
+    
   </header>
-  
-  <p> The capability of single sign on seems to be a very basic infrastructural requireme for any organisation, yet the number of companies without a functioning sso is amazingly high.</p>
+
+
+<div class="entry-content"><h1>Single Sign On - CAS Implementation Guide</h1>
+
+<p> The capability of single sign on seems to be a very basic infrastructural requireme for any organisation, yet the number of companies without a functioning sso is amazingly high.</p>
 
 <p>IESE for instance is one of them. So the first thing I did whe I accepted this job is to initiate a single sign on project. Implementing an SSO brings with it some additional challenge.</p>
 
@@ -116,9 +126,9 @@
 
 <h2>Directory Services and Identity management</h2>
 
-<p>We use active directory. Our University &#8220;Universidad de Navarra&#8221; uses OpenLDAP. We had to do single sign on between both our school and the University. CAS has in-built support for both. Specify within the Server xml which beans and the server details like ldap.expample.com, its port and a non-anonymous service login to bind for the search.</p>
+<p>We use active directory. Our University "Universidad de Navarra" uses OpenLDAP. We had to do single sign on between both our school and the University. CAS has in-built support for both. Specify within the Server xml which beans and the server details like ldap.expample.com, its port and a non-anonymous service login to bind for the search.</p>
 
-<p>Most of the time, based on your directory service configuration you will be able to specify clusters of users to authenticate with particular branches of your directory server. This is recommended as it speeds up authentication process for CAS. for e.g. If you have all your students with the email : student@alumni.school.edu, and have your LDAP with a sub branch called students where all your students exist, then its a good idea to create a separate alumni LDAP server (even if its based on the same LDAP server as staff) just for students. This student&#8217;s ldap server item on your xml will instruct CAS to do search on the sub-branch of &#8220;DC=students,DC=iese,DC=edu&#8221;.</p>
+<p>Most of the time, based on your directory service configuration you will be able to specify clusters of users to authenticate with particular branches of your directory server. This is recommended as it speeds up authentication process for CAS. for e.g. If you have all your students with the email : student@alumni.school.edu, and have your LDAP with a sub branch called students where all your students exist, then its a good idea to create a separate alumni LDAP server (even if its based on the same LDAP server as staff) just for students. This student's ldap server item on your xml will instruct CAS to do search on the sub-branch of "DC=students,DC=iese,DC=edu".</p>
 
 <p>An example of the server configuration file is <a href="http://github.com/avallark/avallark.github.com/projects/cas/server.xml">available here</a></p>
 
@@ -188,30 +198,37 @@ $db_table =
 <p>One of the things to consider while integrating your application with Single Sign On is the which users of the applications need the single sign on. Usually organizations get so lost in the frantic single-sign-on-paranoia that they issue mandates to application teams to integrate all users with SSO in all cases.</p>
 
 <p>The general rule of thumb policy to follow would be to give your <em>customers</em> a single sign on. Administration &amp; staff can use special administrative logins and letting them login multiple times is not an issue. SSO should be for your customers. So when the customer clicks on the login button of your website, take them to the SSO. Have a separate url (like example.com/admin/) for the admin and staff logins. This also makes it easier for application developers to have a separate area for admin &amp; staff.</p>
-
-  
-    <footer>
-      <p class="meta">
-        
-        
+</div>
 
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-28T23:18:00+02:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
-        
-      </p>
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avallark.github.com/single-sign-on/index.html" data-via="avallark" data-counturl="http://avallark.github.com/single-sign-on/index.html" >Tweet</a>
+
+<span class="byline author vcard">Posted by <span class="fn">Abdul Bijur Vallarkodath</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-31T00:00:00+01:00" pubdate data-updated="true">Dec 31<span>st</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avallark.github.com/blog/2011/12/31/Single-Sign-On-CAS-Implementation-Guide/" data-via="avallark" data-counturl="http://avallark.github.com/blog/2011/12/31/Single-Sign-On-CAS-Implementation-Guide/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -219,16 +236,17 @@ $db_table =
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/2011/12/28/iPads-n-Tablets-to-enrich-in-class-learning-experience/" title="Previous Post: iPads & Tablets to enrich in-class learning experience">&laquo; iPads & Tablets to enrich in-class learning experience</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/01/04/Choosing-a-Learning-Management-System/" title="Next Post: Choosing a Learning Management System">Choosing a Learning Management System &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-  </section>
 
 </div>
 
@@ -309,10 +327,7 @@ $db_table =
       var disqus_shortname = 'avallark';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://avallark.github.com/single-sign-on/index.html';
-        var disqus_url = 'http://avallark.github.com/single-sign-on/index.html';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

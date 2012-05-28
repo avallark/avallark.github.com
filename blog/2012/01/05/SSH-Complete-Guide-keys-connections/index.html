@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Upgrading from Jekyll to Octopress - My work and thoughts</title>
+  <title>SSH - Complete Guide, keys, passwords & connect - My work and thoughts</title>
   <meta name="author" content="Bijur Vallarkodath">
 
   
-  <meta name="description" content="Couldn&#8217;t resist the temptation. Octopress templates looked so groovy. I decided to take the dive and 2 hours later, now I am typing this post &hellip;">
+  <meta name="description" content="SSH - Complete Guide, keys, passwords &amp; connections Why bother? The bother is that people are listening. Everyone from your prying neighbour, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress">
+  <link rel="canonical" href="http://avallark.github.com/blog/2012/01/05/SSH-Complete-Guide-keys-connections">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">Upgrading From Jekyll to Octopress</h1>
+      <h1 class="entry-title">SSH - Complete Guide, Keys, Passwords & Connect</h1>
     
     
       <p class="meta">
@@ -83,14 +83,78 @@
   
 
 
-<time datetime="2012-05-28T23:21:00+02:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+<time datetime="2012-01-05T00:00:00+01:00" pubdate data-updated="true">Jan 5<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Couldn&#8217;t resist the temptation. Octopress templates looked so groovy. I decided to take the dive and 2 hours later, now I am typing this post on my emacs. I still have to migrate my other posts on to this blog. I will do that over this week.</p>
+<div class="entry-content"><h1>SSH - Complete Guide, keys, passwords &amp; connections</h1>
+
+<p>Why bother? The bother is that people are listening. Everyone from your prying neighbour, your ISP, your country and crackers and botnets are all listening to your traffic. Everytime you connect to a server online either through ftp, http, telnet etc. your login information and other information can be read by listeners since they arent encrypted. To overcome this, enter ftps, https and <em>ssh</em>.</p>
+
+<p>SSH is a safe way of connecting, copying files and authenticating with a server online. You can generate your public key and let the server know your public key. By doing this, everytime you connect to the server, the server knows that the person connecting is you. You are the only person who can decrypt the public key with your private key that always only stays on your computer.</p>
+
+<h2>Generating SSH keys</h2>
+
+<p>On a linux/unix like machine (yes a mac too) run this</p>
+
+<pre><code>ssh-keygen -t rsa -C "your_email@youremail.com"
+</code></pre>
+
+<p>This will prompt you for a passphrase. You could use one to be safe, so that if someone gets access to your private key, they cannot take advantage of it.</p>
+
+<p>This will create two files</p>
+
+<pre><code>~/.ssh/id_rsa (your private key) 
+</code></pre>
+
+<p>and</p>
+
+<pre><code>~/.ssh/id_rsa.pub (your public key)
+</code></pre>
+
+<p>Keep your private key safe. The public key you can give away ;)</p>
+
+<h2>Passwordless Authentication</h2>
+
+<p>For a server that you used to login into, use the keys above to enable passwordless authentication.</p>
+
+<pre><code>$ cat ~/.ssh/id_rsa.pub 
+</code></pre>
+
+<p>This will output something similar to this</p>
+
+<pre><code>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEArkwv9X8eTVK4F7pMl 
+St45pWoiakFkZMw G9BjydOJPGH0RFNAy1QqIWBGWv7vS5K2tr+EEO+F8WL2Y 
+jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
++YKEyVUMB2CSDOP99eF9g5Q0d+1U2WVdB WQM=raman@ramantePC
+</code></pre>
+
+<p>It is one line in length.</p>
+
+<p>Login into your server the normal way and then copy this one line into .ssh/authorized_keys file using the following</p>
+
+<pre><code>echo [your public_key] &gt;&gt; .ssh/authorized_keys
+</code></pre>
+
+<p>Thats it. Now log off and try ssh into your server again.</p>
+
+<h2>ServerKeepAlive to maintain SSH Connections</h2>
+
+<p>Now that you are using ssh to connect yo your online server, you would have probably noticed how often ssh connections times out. This is because of one variable <strong>ServerAliveInterval</strong> in one of these files:</p>
+
+<pre><code>/etc/sshd_config  or /etc/ssh/sshd_config
+</code></pre>
+
+<p>That's how often, in seconds, ssh will send a keepalive request to the other end of the connection. Now, I have found that at the servers, this value is usually set at 60. Setting your client machine to a value less than 60, like e.g. 45 is enough to make sure that there would be no idle timeout.</p>
+
+<p>This is relatively safe cos as long as your client computer is on, the connection is alive. The moment it goes to sleep or is shutdown, the connection is lost.</p>
+
+<h2>ssh-agent, the true passwordless wonder</h2>
+
+<p>ssh-agent is considered a more safer way of connecting to servers as there are critics about the passwordless mechanism explained earlier. This is because of the vulnerability of having a file physically on your computer, that might get stolen etc. I haven't  delved into it much, but <a href="http://mah.everybody.org/docs/ssh">this seems like a good link</a> for those who want to try it.</p>
 </div>
 
 
@@ -99,7 +163,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Bijur Vallarkodath</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Abdul Bijur Vallarkodath</span></span>
 
       
 
@@ -113,21 +177,15 @@
   
 
 
-<time datetime="2012-05-28T23:21:00+02:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+<time datetime="2012-01-05T00:00:00+01:00" pubdate data-updated="true">Jan 5<span>th</span>, 2012</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/design/'>design</a>, <a class='category' href='/blog/categories/geek-/'>geek,</a>, <a class='category' href='/blog/categories/temptation-/'>temptation,</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/" data-via="avallark" data-counturl="http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avallark.github.com/blog/2012/01/05/SSH-Complete-Guide-keys-connections/" data-via="avallark" data-counturl="http://avallark.github.com/blog/2012/01/05/SSH-Complete-Guide-keys-connections/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -138,18 +196,14 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/05/06/Mobile-communications-primer/" title="Previous Post: Mobile communications primer">&laquo; Mobile communications primer</a>
+        <a class="basic-alignment left" href="/blog/2012/01/04/Choosing-a-Learning-Management-System/" title="Previous Post: Choosing a Learning Management System">&laquo; Choosing a Learning Management System</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/" title="Next Post: NCERT Textbooks in a download friendly format.">NCERT Textbooks in a download friendly format. &raquo;</a>
       
     </p>
   </footer>
 </article>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-  </section>
 
 </div>
 
@@ -230,10 +284,7 @@
       var disqus_shortname = 'avallark';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/';
-        var disqus_url = 'http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

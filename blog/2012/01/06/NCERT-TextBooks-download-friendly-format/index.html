@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Upgrading from Jekyll to Octopress - My work and thoughts</title>
+  <title>NCERT Textbooks in a download friendly format. - My work and thoughts</title>
   <meta name="author" content="Bijur Vallarkodath">
 
   
-  <meta name="description" content="Couldn&#8217;t resist the temptation. Octopress templates looked so groovy. I decided to take the dive and 2 hours later, now I am typing this post &hellip;">
+  <meta name="description" content="NCERT Textbooks in a download friendly format. First things first, the Project is available on Github. A friend of mine was preparing for the UPSC &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress">
+  <link rel="canonical" href="http://avallark.github.com/blog/2012/01/06/NCERT-TextBooks-download-friendly-format">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">Upgrading From Jekyll to Octopress</h1>
+      <h1 class="entry-title">NCERT Textbooks in a Download Friendly Format.</h1>
     
     
       <p class="meta">
@@ -83,14 +83,66 @@
   
 
 
-<time datetime="2012-05-28T23:21:00+02:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+<time datetime="2012-01-06T00:00:00+01:00" pubdate data-updated="true">Jan 6<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Couldn&#8217;t resist the temptation. Octopress templates looked so groovy. I decided to take the dive and 2 hours later, now I am typing this post on my emacs. I still have to migrate my other posts on to this blog. I will do that over this week.</p>
+<div class="entry-content"><h1>NCERT Textbooks in a download friendly format.</h1>
+
+<p>First things first, the <a href="https://github.com/avallark/NCERT-TextBooks">Project is available on Github</a>.</p>
+
+<p>A friend of mine was preparing for the UPSC services examination and he asked my help to locate the NCERT textbooks as that is a good place to start preparing. I found the NCERT website quite fast, but found out that downloading these files from the website is a pain. They make each chapter a separate pdf and cover pages jpg formats. All in all you have to download 20 files if you want to read a text book.</p>
+
+<p>Thus, I started a project so as to unify these pdf files into a single more human-form pdf. The pdf would thus be a complete ebook for one subject of NCERT. To do this, I needed three things</p>
+
+<ul>
+<li>a tool to download these files easily : wget</li>
+<li>a tool to combine these pdfs into a single file : gs (ghostscript)</li>
+<li>a tool to convert jpg to pdfs : ghostscript/ImageMagik</li>
+</ul>
+
+
+<p>All these tools are free open source tools that can be used. So I created two scripts jpg2pdf and compdf to ease their usage.</p>
+
+<p><em>compdf</em> takes in two arguments, 1st is the final pdf name e.g. 8th-Maths.pdf, and the second is the list of pdf file to be merged. The order that is given here is important.</p>
+
+<p>usage:</p>
+
+<pre><code>    compdf "Final pdf name" "coverpage.pdf hesc10?.pdf hesc11?.pdf hesc1an.pdf"
+</code></pre>
+
+<p>e.g.</p>
+
+<pre><code>    compdf "9th-Science-Problems.pdf" "ieep1cc.pdf ieep1ps.pdf ieep10?.pdf ieep11?.pdf ieep1a?.pdf"
+</code></pre>
+
+<p><em>jpg2pdf</em> is required as compdf can only merge pdfs and some coverpages are given in jpg files. so you will need to convert them to pdf.</p>
+
+<p>usage:</p>
+
+<pre><code>    jpg2pdf JPEG-Filename.jpg PDF-Filename.pdf 
+</code></pre>
+
+<p><em>Note, most probably the jpg2pdf will error out on your computer because of the location of the viewjpeg.ps file on your computer. It will be different on your computer so use locate or find to find this file and then replace the path to that file in the jpg2pdf script.</em></p>
+
+<p>These both tools are also added in the scripts folder of the project.</p>
+
+<p>I used these tools and have uploaded a few textbooks, mostly those relevant to the UPSC civil services examinations.So folks who are preparing for it, can download the complete textbooks from this website.</p>
+
+<h2>Plea to contribute</h2>
+
+<p>While I was creating this, I realised that this is a good way of trying to provide a way for people to easily download pdf files directly to their computers, without having to worry about merging the pdfs etc. I have provided you with all the tools you will need, in the scripts folder.</p>
+
+<p>If you have some time, rather than wasting it on tv, <a href="http://www.forbes.com/sites/jessicahagy/2011/11/30/how-to-be-interesting/">make yourself interesting</a> use it to contribute to this project. Your efforts would be greatly appreciated by the millions of kids in India who will be helped by this deed of yours.</p>
+
+<p>If you have unmerged pdf files, you can also contribute by uploading them to the directory called "unmerged". I will merge them as soon as I can.</p>
+
+<h4>A note about copyrights</h4>
+
+<p>All copyright belongs to NCERT. I only function as a facilitator and do not own any copyright. We thank NCERT for making these textbooks available in the public domain.</p>
 </div>
 
 
@@ -99,7 +151,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Bijur Vallarkodath</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Abdul Bijur Vallarkodath</span></span>
 
       
 
@@ -113,21 +165,15 @@
   
 
 
-<time datetime="2012-05-28T23:21:00+02:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+<time datetime="2012-01-06T00:00:00+01:00" pubdate data-updated="true">Jan 6<span>th</span>, 2012</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/design/'>design</a>, <a class='category' href='/blog/categories/geek-/'>geek,</a>, <a class='category' href='/blog/categories/temptation-/'>temptation,</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/" data-via="avallark" data-counturl="http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avallark.github.com/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/" data-via="avallark" data-counturl="http://avallark.github.com/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -138,18 +184,14 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/05/06/Mobile-communications-primer/" title="Previous Post: Mobile communications primer">&laquo; Mobile communications primer</a>
+        <a class="basic-alignment left" href="/blog/2012/01/05/SSH-Complete-Guide-keys-connections/" title="Previous Post: SSH - Complete Guide, keys, passwords & connect">&laquo; SSH - Complete Guide, keys, passwords & connect</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2012/05/06/Indias-defensive-arsenal/" title="Next Post: India's defensive arsenal">India's defensive arsenal &raquo;</a>
       
     </p>
   </footer>
 </article>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-  </section>
 
 </div>
 
@@ -230,10 +272,7 @@
       var disqus_shortname = 'avallark';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/';
-        var disqus_url = 'http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
