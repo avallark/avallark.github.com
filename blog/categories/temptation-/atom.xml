@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My work and thoughts]]></title>
-  <link href="http://avallark.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: temptation, | My work and thoughts]]></title>
+  <link href="http://avallark.github.com/blog/categories/temptation-/atom.xml" rel="self"/>
   <link href="http://avallark.github.com/"/>
   <updated>2012-05-28T23:25:13+02:00</updated>
   <id>http://avallark.github.com/</id>
@@ -18,7 +18,7 @@
     <link href="http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress/"/>
     <updated>2012-05-28T23:21:00+02:00</updated>
     <id>http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress</id>
-    <content type="html"><![CDATA[<p>Couldn&#8217;t resist the temptation. Octopress templates looked so groovy. I decided to take the dive and 2 hours later, now I am typing this post on my emacs. I still have to migrate my other posts on to this blog. I will do that over this week.</p>
+    <content type="html"><![CDATA[<p>Couldn't resist the temptation. Octopress templates looked so groovy. I decided to take the dive and 2 hours later, now I am typing this post on my emacs. I still have to migrate my other posts on to this blog. I will do that over this week.</p>
 ]]></content>
   </entry>
   
