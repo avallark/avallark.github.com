@@ -4,7 +4,7 @@
   <title><![CDATA[My work and thoughts]]></title>
   <link href="http://avallark.github.com/atom.xml" rel="self"/>
   <link href="http://avallark.github.com/"/>
-  <updated>2012-05-28T23:35:06+02:00</updated>
+  <updated>2012-05-28T23:43:00+02:00</updated>
   <id>http://avallark.github.com/</id>
   <author>
     <name><![CDATA[Bijur Vallarkodath]]></name>
@@ -25,9 +25,9 @@
   <entry>
     <title type="html"><![CDATA[Mobile communications primer]]></title>
     <link href="http://avallark.github.com/blog/2012/05/06/Mobile-communications-primer/"/>
-    <updated>2012-05-06T00:00:00+02:00</updated>
+    <updated>2012-05-06T23:21:00+02:00</updated>
     <id>http://avallark.github.com/blog/2012/05/06/Mobile-communications-primer</id>
-    <content type="html"><![CDATA[<h1>Mobile communications primer</h1>
+    <content type="html"><![CDATA[<p>This guide was written for a friend who wanted a quick read of some basic information on the different wireless technologies. Feel free to correct me if I am wrong or if I miss something.</p>
 
 <h2>Electromagnetic radiation</h2>
 
