@@ -4,7 +4,7 @@
   <title><![CDATA[Category: temptation, | My work and thoughts]]></title>
   <link href="http://avallark.github.com/blog/categories/temptation-/atom.xml" rel="self"/>
   <link href="http://avallark.github.com/"/>
-  <updated>2012-05-29T11:04:30+02:00</updated>
+  <updated>2012-05-29T11:22:35+02:00</updated>
   <id>http://avallark.github.com/</id>
   <author>
     <name><![CDATA[Bijur Vallarkodath]]></name>
@@ -19,6 +19,10 @@
     <updated>2012-05-28T23:21:00+02:00</updated>
     <id>http://avallark.github.com/blog/2012/05/28/upgrading-from-jekyll-to-octopress</id>
     <content type="html"><![CDATA[<p>Couldn't resist the temptation. Octopress templates looked so groovy. I decided to take the dive and 2 hours later, now I am typing this post on my emacs. I still have to migrate my other posts on to this blog. I will do that over this week.</p>
+
+<p><a href="http://octopress.org">Octopress</a> is the built on <a href="http://jekyllrb.com/">Jekyll</a> and is just really jekyll packaged and made prettier with default fonts and styles. Thank you octopress.</p>
+
+<p>You have to do a ruby, gems, octopress gem installation. But once the initial installation is done, you can do all your posting on markdown. I use emacs for all my coding and editing and hence being able to type in markdown is a great advantage for me.</p>
 ]]></content>
   </entry>
   
