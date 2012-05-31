@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | My work and thoughts]]></title>
   <link href="http://avallark.github.com/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://avallark.github.com/"/>
-  <updated>2012-05-31T21:04:48+02:00</updated>
+  <updated>2012-05-31T21:55:00+02:00</updated>
   <id>http://avallark.github.com/</id>
   <author>
     <name><![CDATA[Bijur Vallarkodath]]></name>
@@ -19,8 +19,6 @@
     <updated>2012-05-31T13:09:00+02:00</updated>
     <id>http://avallark.github.com/blog/2012/05/31/clojure-on-mac-and-emacs</id>
     <content type="html"><![CDATA[<p>First you need to get "lein". Lein is a tool that lets you manage your projects in clojure. Lein also has a REPL that lets you run clojure directly.</p>
-
-<p><em>Disclaimer: Some of you have tried copy pasting and noticed that emacs throws out errors in code. This is because octopress uses opening and closing quotes in my themes. Simply replace all single and double quotes with the normal quotes and they will work just fine.</em></p>
 
 <pre><code>~$ wget https://raw.github.com/technomancy/leiningen/stable/bin/lein
 </code></pre>
