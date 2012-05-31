@@ -1,1 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
+  <title><![CDATA[Category: education | My work and thoughts]]></title>
+  <link href="http://avallark.github.com/blog/categories/education/atom.xml" rel="self"/>
+  <link href="http://avallark.github.com/"/>
+  <updated>2012-05-31T22:37:26+02:00</updated>
+  <id>http://avallark.github.com/</id>
+  <author>
+    <name><![CDATA[Bijur Vallarkodath]]></name>
+    <email><![CDATA[bijur@grep-i.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SSH - Complete Guide, keys, passwords & connect]]></title>
+    <link href="http://avallark.github.com/blog/2012/01/05/SSH-Complete-Guide-keys-connections/"/>
+    <updated>2012-01-05T00:00:00+01:00</updated>
+    <id>http://avallark.github.com/blog/2012/01/05/SSH-Complete-Guide-keys-connections</id>
+    <content type="html"><![CDATA[<p>Why bother? The bother is that people are listening. Everyone from your prying neighbour, your ISP, your country and crackers and botnets are all listening to your traffic. Everytime you connect to a server online either through ftp, http, telnet etc. your login information and other information can be read by listeners since they arent encrypted. To overcome this, enter ftps, https and <em>ssh</em>.</p>
+
+<p>SSH is a safe way of connecting, copying files and authenticating with a server online. You can generate your public key and let the server know your public key. By doing this, everytime you connect to the server, the server knows that the person connecting is you. You are the only person who can decrypt the public key with your private key that always only stays on your computer.</p>
+
+<h2>Generating SSH keys</h2>
+
+<p>On a linux/unix like machine (yes a mac too) run this</p>
+
+<pre><code>ssh-keygen -t rsa -C "your_email@youremail.com"
+</code></pre>
+
+<p>This will prompt you for a passphrase. You could use one to be safe, so that if someone gets access to your private key, they cannot take advantage of it.</p>
+
+<p>This will create two files</p>
+
+<pre><code>~/.ssh/id_rsa (your private key) 
+</code></pre>
+
+<p>and</p>
+
+<pre><code>~/.ssh/id_rsa.pub (your public key)
+</code></pre>
+
+<p>Keep your private key safe. The public key you can give away ;)</p>
+
+<h2>Passwordless Authentication</h2>
+
+<p>For a server that you used to login into, use the keys above to enable passwordless authentication.</p>
+
+<pre><code>$ cat ~/.ssh/id_rsa.pub 
+</code></pre>
+
+<p>This will output something similar to this</p>
+
+<pre><code>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEArkwv9X8eTVK4F7pMl 
+St45pWoiakFkZMw G9BjydOJPGH0RFNAy1QqIWBGWv7vS5K2tr+EEO+F8WL2Y 
+jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
++YKEyVUMB2CSDOP99eF9g5Q0d+1U2WVdB WQM=raman@ramantePC
+</code></pre>
+
+<p>It is one line in length.</p>
+
+<p>Login into your server the normal way and then copy this one line into .ssh/authorized_keys file using the following</p>
+
+<pre><code>echo [your public_key] &gt;&gt; .ssh/authorized_keys
+</code></pre>
+
+<p>Thats it. Now log off and try ssh into your server again.</p>
+
+<h2>ServerKeepAlive to maintain SSH Connections</h2>
+
+<p>Now that you are using ssh to connect yo your online server, you would have probably noticed how often ssh connections times out. This is because of one variable <strong>ServerAliveInterval</strong> in one of these files:</p>
+
+<pre><code>/etc/sshd_config  or /etc/ssh/sshd_config
+</code></pre>
+
+<p>That's how often, in seconds, ssh will send a keepalive request to the other end of the connection. Now, I have found that at the servers, this value is usually set at 60. Setting your client machine to a value less than 60, like e.g. 45 is enough to make sure that there would be no idle timeout.</p>
+
+<p>This is relatively safe cos as long as your client computer is on, the connection is alive. The moment it goes to sleep or is shutdown, the connection is lost.</p>
+
+<h2>ssh-agent, the true passwordless wonder</h2>
+
+<p>ssh-agent is considered a more safer way of connecting to servers as there are critics about the passwordless mechanism explained earlier. This is because of the vulnerability of having a file physically on your computer, that might get stolen etc. I haven't  delved into it much, but <a href="http://mah.everybody.org/docs/ssh">this seems like a good link</a> for those who want to try it.</p>
+]]></content>
+  </entry>
+  
+</feed>

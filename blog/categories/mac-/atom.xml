@@ -1,1 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
+  <title><![CDATA[Category: mac, | My work and thoughts]]></title>
+  <link href="http://avallark.github.com/blog/categories/mac-/atom.xml" rel="self"/>
+  <link href="http://avallark.github.com/"/>
+  <updated>2012-05-31T22:37:26+02:00</updated>
+  <id>http://avallark.github.com/</id>
+  <author>
+    <name><![CDATA[Bijur Vallarkodath]]></name>
+    <email><![CDATA[bijur@grep-i.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Clojure on Mac &amp; Emacs]]></title>
+    <link href="http://avallark.github.com/blog/2012/05/31/clojure-on-mac-and-emacs/"/>
+    <updated>2012-05-31T13:09:00+02:00</updated>
+    <id>http://avallark.github.com/blog/2012/05/31/clojure-on-mac-and-emacs</id>
+    <content type="html"><![CDATA[<p>First you need to get "lein". Lein is a tool that lets you manage your projects in clojure. Lein also has a REPL that lets you run clojure directly.</p>
+
+<pre><code>~$ wget https://raw.github.com/technomancy/leiningen/stable/bin/lein
+</code></pre>
+
+<p>This will download lein into your home directory. Once downloaded, move it to ~/bin directory. Add bin directory to your <strong>PATH</strong> environment variable and then finally make this file executable using the following commands.</p>
+
+<pre><code>~$ mkdir ~/bin
+~$ mv lein ~/bin
+~$ export PATH=$PATH:~/bin #put this into your .bashrc
+~$ chmod u+x ~/bin/lein
+</code></pre>
+
+<p>Once this is done, run lein with the following command</p>
+
+<pre><code>~$ lein repl 
+</code></pre>
+
+<p>This command is to get a REPL command line to run your clojure code. When run for the first time, it will try to find clojure and if it doesn't find it installed, then it will download clojure and install it and return you the following shell</p>
+
+<pre><code>user=&gt; 
+</code></pre>
+
+<p>Write your first clojure program by typing  <em>(println "hello, world")</em> into this shell. You can type <em>(exit)</em> to exit.</p>
+
+<p>There you go, now you have clojure and lein installed.</p>
+
+<p>Now you need to configure your emacs to use this setup. I am going to use SLIME and swank-clojure. First let us install swank-clojure plugin to lein.</p>
+
+<pre><code>~ $ lein plugin install swank-clojure 1.3.4
+</code></pre>
+
+<p>This command should end with :</p>
+
+<pre><code>Including clojure-1.2.1.jar
+Created swank-clojure-1.3.4.jar
+</code></pre>
+
+<p>Now add the ~/bin to execution path within your .emacs file. (anywhere)</p>
+
+<pre><code>(setenv "PATH" (concat (getenv "PATH") ":~/bin"))
+(setq exec-path (append exec-path '("/sw/bin")))
+</code></pre>
+
+<p>I prefer using slime for my lisp! sweet sweet slime. It is important that you do not have your old slime, its known to create problems. I would recommend commenting out the old slime load instructions on your .emacs.  To load slime, all you need is clojure-mode.el from</p>
+
+<pre><code>https://github.com/jochu/clojure-mode
+</code></pre>
+
+<p>and add the following lines in your .emacs</p>
+
+<pre><code>(add-to-list 'load-path "~/.emacs-local/clojure-mode")
+(require 'clojure-mode)
+</code></pre>
+
+<p>This is all you need.</p>
+
+<p>Now on your command prompt you could use lein to create a new project.</p>
+
+<pre><code>$ lein new first-project
+</code></pre>
+
+<p>This will create a new directory called <em>first-project</em> in your current directory.</p>
+
+<p>Open emacs, go to eshell and cd to the directory of the project. Once you are there type</p>
+
+<pre><code>M-x clojure-jack-in
+</code></pre>
+
+<p>and thats it!! you will have SLIME ready to go!</p>
+
+<p>"hack and glory await"</p>
+]]></content>
+  </entry>
+  
+</feed>
