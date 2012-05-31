@@ -1,532 +1,140 @@
 
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>My work and thoughts</title>
-  <meta name="author" content="Bijur Vallarkodath">
+<html lang="ja">
+  <head>
+    <!-- include head -->
+    
 
-  
-  <meta name="description" content="First you need to get &#8220;lein&#8221;. Lein is a tool that lets you manage your projects in clojure. Lein also has a REPL that lets you run &hellip;">
-  
+<meta charset="utf-8">
+<title>My work and thoughts</title>
+<meta name="author" content="Bijur Vallarkodath">
+<meta name="description"
+      content="最近のブログ投稿 Clojure on Mac &amp; Emacs （May 31st, 2012） Upgrading from Jekyll to Octopress （May 28th, 2012） Mobile communications primer （May 6th, 2012 &hellip;">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-  <link rel="canonical" href="http://avallark.github.com">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="My work and thoughts" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic rel="stylesheet"" type="text/css">
+<link rel="canonical" href="http://avallark.github.com">
+<link href="/favicon.png" rel="icon">
+<link href="/stylesheets/screen.css"
+      media="screen, projection"
+      rel="stylesheet"
+      type="text/css">
+<link href="/atom.xml"
+      rel="alternate"
+      title="My work and thoughts"
+      type="application/atom+xml">
 
-  
+<style type="text/css">
+  header[role="banner"] hgroup h1 {
+    /* font-size: 180% */
+    color: #999;
+  }
+</style>
 
-</head>
 
-<body   >
-  <header role="banner"><hgroup>
+<script src="/javascripts/modernizr-2.0.js" type="text/javascript"></script>
+<script src="/javascripts/ender.js" type="text/javascript"></script>
+<script src="/javascripts/octopress.js" type="text/javascript"></script>
+
+
+
+    <!-- /include -->
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <header role="banner" class="site_metas">
+	<!-- include header -->
+	
+<hgroup>
   <h1><a href="/">My work and thoughts</a></h1>
   
-    <h2>For the world is hollow, and I have touched the sky.</h2>
+  <h2>For the world is hollow, and I have touched the sky.</h2>
   
 </hgroup>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://duckduckgo.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:avallark.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/31/clojure-on-mac-and-emacs/">Clojure on Mac &amp; Emacs</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-31T13:09:00+02:00" pubdate data-updated="true">May 31<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/05/31/clojure-on-mac-and-emacs/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>First you need to get &#8220;lein&#8221;. Lein is a tool that lets you manage your projects in clojure. Lein also has a REPL that lets you run clojure directly.</p>
-
-<pre><code>~$ wget https://raw.github.com/technomancy/leiningen/stable/bin/lein
-</code></pre>
-
-<p>This will download lein into your home directory. Once downloaded, move it to ~/bin directory. Add bin directory to your <strong>PATH</strong> environment variable and then finally make this file executable using the following commands.</p>
-
-<pre><code>~$ mkdir ~/bin
-~$ mv lein ~/bin
-~$ export PATH=$PATH:~/bin #put this into your .bashrc
-~$ chmod u+x ~/bin/lein
-</code></pre>
-
-<p>Once this is done, run lein with the following command</p>
-
-<pre><code>~$ lein repl 
-</code></pre>
-
-<p>This command is to get a REPL command line to run your clojure code. When run for the first time, it will try to find clojure and if it doesn&#8217;t find it installed, then it will download clojure and install it and return you the following shell</p>
-
-<pre><code>user=&gt; 
-</code></pre>
-
-<p>Write your first clojure program by typing  <em>(println &#8220;hello, world&#8221;)</em> into this shell. You can type <em>(exit)</em> to exit.</p>
-
-<p>There you go, now you have clojure and lein installed.</p>
-
-<p>Now you need to configure your emacs to use this setup. I am going to use SLIME and swank-clojure. First let us install swank-clojure plugin to lein.</p>
-
-<pre><code>~ $ lein plugin install swank-clojure 1.3.4
-</code></pre>
-
-<p>This command should end with :</p>
-
-<pre><code>Including clojure-1.2.1.jar
-Created swank-clojure-1.3.4.jar
-</code></pre>
-
-<p>Now add the ~/bin to execution path within your .emacs file. (anywhere)</p>
-
-<pre><code>(setenv "PATH" (concat (getenv "PATH") ":~/bin"))
-(setq exec-path (append exec-path '("/sw/bin")))
-</code></pre>
-
-<p>I prefer using slime for my lisp! sweet sweet slime. It is important that you do not have your old slime, its known to create problems. I would recommend commenting out the old slime load instructions on your .emacs.  To load slime, all you need is clojure-mode.el from</p>
-
-<pre><code>https://github.com/jochu/clojure-mode
-</code></pre>
-
-<p>and add the following lines in your .emacs</p>
-
-<pre><code>(add-to-list 'load-path "~/.emacs-local/clojure-mode")
-(require 'clojure-mode)
-</code></pre>
-
-<p>This is all you need.</p>
-
-<p>Now on your command prompt you could use lein to create a new project.</p>
-
-<pre><code>$ lein new first-project
-</code></pre>
-
-<p>This will create a new directory called <em>first-project</em> in your current directory.</p>
-
-<p>Open emacs, go to eshell and cd to the directory of the project. Once you are there type</p>
-
-<pre><code>M-x clojure-jack-in
-</code></pre>
-
-<p>and thats it!! you will have SLIME ready to go!</p>
-
-<p>&#8220;hack and glory await&#8221;</p>
+	<!-- /include -->
+        <!-- include social_service_links -->
+	
+<div id="social-links">
+  <ul>
+    <li id="social-links-github">
+      <a title="GitHub" href="https://github.com/kui">github</a>
+    </li>
+    <li id="social-links-twitter">
+      <a title="twitter" href="http://twitter.com/k_ui">twitter</a>
+    </li>
+    <li id="social-links-tumblr">
+      <a title="tumblr" href="http://daftbeats.tumblr.com/">tumblr</a>
+    </li>
+    <li id="social-links-feed">
+      <a title="feed" href="http://k-ui.jp/atom.xml">feed</a>
+    </li>
+  </ul>
 </div>
-  
-  
 
+        <!-- /include -->
+      </header>
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
+      <div id="content">
+	<!-- content -->
+	<div id="page">
+  <div id="top">
+
+  <div id="recent_posts">
+    <h2>最近のブログ投稿</h2>
+
+    <ul>
     
-      <h1 class="entry-title"><a href="/blog/2012/05/28/upgrading-from-jekyll-to-octopress/">Upgrading From Jekyll to Octopress</a></h1>
+      <li>
+        <article>
+          <a rel="full-article" href="/blog/2012/05/31/clojure-on-mac-and-emacs/">Clojure on Mac &amp; Emacs</a>
+          （<time datetime="2012-05-31 13:09:00 +0200" pubdate>May 31<span>st</span>, 2012</time>）
+        </article>
+      </li>
     
+      <li>
+        <article>
+          <a rel="full-article" href="/blog/2012/05/28/upgrading-from-jekyll-to-octopress/">Upgrading from Jekyll to Octopress</a>
+          （<time datetime="2012-05-28 23:21:00 +0200" pubdate>May 28<span>th</span>, 2012</time>）
+        </article>
+      </li>
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-28T23:21:00+02:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/05/28/upgrading-from-jekyll-to-octopress/#disqus_thread">Comments</a>
-        
-      </p>
+      <li>
+        <article>
+          <a rel="full-article" href="/blog/2012/05/06/Mobile-communications-primer/">Mobile communications primer</a>
+          （<time datetime="2012-05-06 23:21:00 +0200" pubdate>May 6<span>th</span>, 2012</time>）
+        </article>
+      </li>
     
-  </header>
-
-
-  <div class="entry-content"><p>Couldn&#8217;t resist the temptation. Octopress templates looked so groovy. I decided to take the dive and 2 hours later, now I am typing this post on my emacs. I still have to migrate my other posts on to this blog. I will do that over this week.</p>
-
-<p><a href="http://octopress.org">Octopress</a> is the built on <a href="http://jekyllrb.com/">Jekyll</a> and is just really jekyll packaged and made prettier with default fonts and styles. Thank you octopress.</p>
-
-<p>You have to do a ruby, gems, octopress gem installation. But once the initial installation is done, you can do all your posting on markdown. I use emacs for all my coding and editing and hence being able to type in markdown is a great advantage for me.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
+      <li>
+        <article>
+          <a rel="full-article" href="/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/">NCERT Textbooks in a download friendly format.</a>
+          （<time datetime="2012-01-06 00:00:00 +0100" pubdate>Jan 6<span>th</span>, 2012</time>）
+        </article>
+      </li>
     
-      <h1 class="entry-title"><a href="/blog/2012/05/06/Mobile-communications-primer/">Mobile Communications Primer</a></h1>
+      <li>
+        <article>
+          <a rel="full-article" href="/blog/2012/01/05/SSH-Complete-Guide-keys-connections/">SSH - Complete Guide, keys, passwords & connect</a>
+          （<time datetime="2012-01-05 00:00:00 +0100" pubdate>Jan 5<span>th</span>, 2012</time>）
+        </article>
+      </li>
     
-    
-      <p class="meta">
-        
+    </ul>
 
+    <p><a href="/blog/archives">&laquo; 過去の記事</a></p>
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-06T23:21:00+02:00" pubdate data-updated="true">May 6<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/05/06/Mobile-communications-primer/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This guide was written for a friend who wanted a quick read of some basic information on the different wireless technologies. Feel free to correct me if I am wrong or if I miss something.</p>
-
-<h2>Electromagnetic radiation</h2>
-
-<p>Electromagnetic radiation (EM radiation or EMR) is a form of energy emitted and absorbed by charged particles, which exhibits wave-like behalfvior as it travels through space. EMR has both electric and magnetic field components. In vacuum, electricalectromagnetic radiation propagates at a characteristic speed, the speed of light.</p>
-
-<p>EMR represents all energy of electrical and magnetic proportion that can be used to transmit data and information.Just like a ruler, a particular point of EMR is pin pointed by the frequency of the particular radiation. By affecting the electrical or magnetic property of a particular point of an EMR at a particular frequency, we can transmit data along this frequency. A lot of these frequencies are good enough to transport data, a lot of them aren&#8217;t (atleast with the methods we know now). The entire range (universal set) of these frequencies is called the electromagnetic spectrum.</p>
-
-<h2>Electromagnetic spectrum</h2>
-
-<p>The electromagnetic spectrum extends from low frequencies used for modern radio communication to gamma radiation at the short-wavelength (high-frequency) end, thereby covering wavelengths from thousands of kilometres down to a fraction of the size of an atom. It is for this reason that the electromagnetic spectrum is highly studied for spectroscopic purposes to characterize matter. The limit for long wavelength is the size of the universe itself, while it is thought that the short wavelength limit is in the vicinity of the Planck length, although in principle the spectrum is infinite and continuous.</p>
-
-<p>The lower frequency range is used for Radio waves which are used for mobile communications. At any frequency, by constantly modifying the electrical or magnetic properties of the radiation, messages can be transmitted.</p>
-
-<h2>Mobile communication using EMR</h2>
-
-<p>Let us assume that a person A wants to send a message to a person B. Person A choses a particular frequency lets say 3.122 x 10<sup>4</sup> (or 31.22 KHz) to transmit the message. The person, then with a device, lets call it an encoder, encodes his message into a series of changes at the particular frequency. By changing the electrical and/or magnetic properties of this particular frequency a coded message can be transmitted. Person B can simply listen to this exact frequency of 31.22 kHz and use a &#8216;decoder&#8217; to convert these variations in electrical and magnetic properties into a human understandable form. Thus A has used a particular point on the electro magnetic spectrum to communicate with person B.</p>
-
-<p>This is exactly how we use our mobile phones to communicate with each other. The encoding and decoding I mentioned in the above paragraph is the different methods of transfering a human understandable message into electric and/or magnetic variations that the wave can carry and decoding is the method of converting them back. Such a device would be your mobile phones.</p>
-
-<p>There are several methods used to do this encoding and decoding. They are 1G, GSM (2G), GPRS, CDMA etc.</p>
-
-<h3>1G</h3>
-
-<p>1G or the first generation refers to the analog methods of transmitting and receiving information. 1G speeds vary between that of a 28k modem(28kbit/s) and 56k modem(56kbit/s). Antecedent to 1G technology is the mobile radio telephone, or 0G.</p>
-
-<h3>2G</h3>
-
-<p>2G (or 2-G) is short for second-generation wireless telephone technology. Second generation 2G cellular telecom networks were commercially launched on the GSM standard in Finland by Radiolinja (now part of Elisa Oyj) in 1991. Three primary benefits of 2G networks over their predecessors were that phone conversations were digitally encrypted; 2G systems were significantly more efficient on the spectrum allowing for far greater mobile phone penetration levels; and 2G introduced data services for mobile, starting with SMS text messages.</p>
-
-<h3>GSM (Global System for Mobile Communication)</h3>
-
-<p>GSM (Global System for Mobile Communications, originally Groupe Spécial Mobile), is a <strong>standard set</strong> developed by the European Telecommunications Standards Institute (ETSI) to describe technologies for second generation (2G) digital cellular networks. Developed as a replacement for first generation (1G) analog cellular networks, the GSM standard originally described a digital, circuit switched network optimized for full duplex voice telephony. The standard was expanded over time to include first circuit switched data transport, then packet data transport via GPRS (General Packet Radio Services). Packet data transmission speeds were later increased via EDGE (Enhanced Data rates for GSM Evolution) referred as EGPRS. The GSM standard is more improved after the development of third generation (3G) UMTS standard developed by the 3GPP. GSM networks will evolve further as they begin to incorporate fourth generation (4G) LTE Advanced standards. &#8220;GSM&#8221; is a trademark owned by the GSM Association.</p>
-
-<h3>General Packet Radio Service (GPRS)</h3>
-
-<p>General packet radio service (GPRS) is a packet oriented mobile data service on the 2G and 3G cellular communication system&#8217;s (GSM). GPRS was originally standardized by European Telecommunications Standards Institute (ETSI). It is a <strong>service</strong> provided with GSM technologies of mobile communications.</p>
-
-<h3>3G</h3>
-
-<p>G or 3rd generation mobile telecommunications is a generation of standards for mobile phones and mobile telecommunication services fulfilling the International Mobile Telecommunications-2000 (IMT-2000) specifications by the International Telecommunication Union. Application services include wide-area wireless voice telephone, mobile Internet access, video calls and mobile TV, all in a mobile environment.</p>
-
-<p>Several telecommunications companies market wireless mobile Internet services as 3G, indicating that the advertised service is provided over a 3G wireless network. Services advertised as 3G are required to meet IMT-2000 technical standards, including standards for reliability and speed (data transfer rates). To meet the IMT-2000 standards, a system is required to provide peak data rates of at least 200 kbit/s (about 0.2 Mbit/s). However, many services advertised as 3G provide higher speed than the minimum technical requirements for a 3G service. Recent 3G releases, often denoted 3.5G and 3.75G, also provide mobile broadband access of several Mbit/s to smartphones and mobile modems in laptop computers.</p>
-
-<h3>CDMA</h3>
-
-<p>Code division multiple access (CDMA) is a channel access method used by various radio communication technologies.It should not be confused with the mobile phone standards called cdmaOne, CDMA2000 (the 3G evolution of cdmaOne) and WCDMA (the 3G standard used by GSM carriers), which are often referred to as simply CDMA, and use CDMA as an underlying channel access method.</p>
-
-<p>One of the concepts in data communication is the idea of allowing several transmitters to send information simultaneously over a single communication channel. This allows several users to share a band of frequencies (see bandwidth). This concept is called multiple access. CDMA employs spread-spectrum technology and a special coding scheme (where each transmitter is assigned a code) to allow multiple users to be multiplexed over the same physical channel. By contrast, time division multiple access (TDMA) divides access by time, while frequency-division multiple access (FDMA) divides it by frequency. CDMA is a form of spread-spectrum signalling, since the modulated coded signal has a much higher data bandwidth than the data being communicated.</p>
-
-<h3>Wifi or Wireless Local Area Network</h3>
-
-<p>Wi-Fi  is a popular technology that allows an electronic device to exchange data wirelessly (using radio waves) over a computer network, including high-speed Internet connections. The Wi-Fi Alliance defines Wi-Fi as any &#8220;wireless local area network (WLAN) products that are based on the Institute of Electrical and Electronics Engineers&#8217; (IEEE) 802.11 standards&#8221;. However, since most modern WLANs are based on these standards, the term &#8220;Wi-Fi&#8221; is used in general English as a synonym for &#8220;WLAN&#8221;.</p>
-
-<p>A device that can use Wi-Fi (such as a personal computer, video game console, smartphone, tablet, or digital audio player) can connect to a network resource such as the Internet via a wireless network access point. Such an access point (or hotspot) has a <strong>range of about 20 meters</strong> (65 feet) indoors and a greater range outdoors. Hotspot coverage can comprise an area as small as a single room with walls that block radio waves or as large as many square miles — this is achieved by using multiple overlapping access points.</p>
-
-<p>Wifi is usually protected by encryption mechanisms like the WEP/WPA/WPA2/802.11 and other standards in order to prevent unauthorized access.</p>
-
-<h3>Wimax</h3>
-
-<p>WiMAX (Worldwide Interoperability for Microwave Access) is a wireless communications standard designed to provide 30 to 40 megabit-per-second data rates, with the 2011 update providing up to 1 Gbit/s for fixed stations. It is a part of a “fourth generation,” or 4G, of wireless-communication technology. WiMax far surpasses the 30-metre (100-foot) wireless range of a conventional Wi-Fi local area network (LAN), offering a metropolitan area network with a signal radius of about <strong>50 km</strong>. The name &#8220;WiMAX&#8221; was created by the WiMAX Forum, which was formed in June 2001 to promote conformity and interoperability of the standard. The forum describes WiMAX as &#8220;a standards-based technology enabling the delivery of last mile wireless broadband access as an alternative to cable and DSL&#8221;. WiMax offers data-transfer rates that can be superior to conventional cable-modem and DSL connections, however, the bandwidth must be split among multiple users and thus yields lower speeds in practice.</p>
-
-<p>Remember wimax is a Local area wireless connection. Though the range is now at 50km, it still is more closer to your wifi at home than the Mobile communication standards of 3G.</p>
-
-<h3>Long Term Evolution (LTE) 3GPP</h3>
-
-<p>3GPP Long Term Evolution, referred to as LTE and marketed as 4G LTE, is a standard for wireless communication of high-speed data for mobile phones and data terminals. It is based on the GSM/EDGE and UMTS/HSPA network technologies, increasing the capacity and speed using new modulation techniques. The standard is developed by the 3GPP (3rd Generation Partnership Project) and is specified in its Release 8 document series, with minor enhancements described in Release 9.</p>
-
-<p>The world&#8217;s first publicly available LTE service was launched by TeliaSonera in Oslo and Stockholm on 14 December 2009. LTE is the natural upgrade path for carriers with GSM/UMTS networks, but even CDMA holdouts such as Verizon Wireless, who launched the first large-scale LTE network in North America in 2010, and au by KDDI in Japan have announced they will migrate to LTE. LTE is, therefore, anticipated to become the first truly global mobile phone standard, although the use of different frequency bands in different countries will mean that only multi-band phones will be able to utilize LTE in all countries where it is supported.</p>
-
-<h3>Nearfield wireless communication using Bluetooth</h3>
-
-<p>Bluetooth is a proprietary open wireless technology standard for exchanging data over <strong>short distances</strong> (using short-wavelength radio transmissions in the ISM band from 2400–2480 MHz) from fixed and mobile devices, creating personal area networks (PANs) with high levels of security. Created by telecoms vendor Ericsson in 1994, it was originally conceived as a wireless alternative to RS-232 data cables. It can connect several devices, overcoming problems of synchronization.</p>
-
-<p><em>Most of the data in this article is from Wikipedia. The purpose of this article is to aggregate information for educational purposes</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/">NCERT Textbooks in a Download Friendly Format.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-06T00:00:00+01:00" pubdate data-updated="true">Jan 6<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>First things first, the <a href="https://github.com/avallark/NCERT-TextBooks">Project is available on Github</a>.</p>
-
-<p>A friend of mine was preparing for the UPSC services examination and he asked my help to locate the NCERT textbooks as that is a good place to start preparing. I found the NCERT website quite fast, but found out that downloading these files from the website is a pain. They make each chapter a separate pdf and cover pages jpg formats. All in all you have to download 20 files if you want to read a text book.</p>
-
-<p>Thus, I started a project so as to unify these pdf files into a single more human-form pdf. The pdf would thus be a complete ebook for one subject of NCERT. To do this, I needed three things</p>
-
-<ul>
-<li>a tool to download these files easily : wget</li>
-<li>a tool to combine these pdfs into a single file : gs (ghostscript)</li>
-<li>a tool to convert jpg to pdfs : ghostscript/ImageMagik</li>
-</ul>
-
-
-<p>All these tools are free open source tools that can be used. So I created two scripts jpg2pdf and compdf to ease their usage.</p>
-
-<p><em>compdf</em> takes in two arguments, 1st is the final pdf name e.g. 8th-Maths.pdf, and the second is the list of pdf file to be merged. The order that is given here is important.</p>
-
-<p>usage:</p>
-
-<pre><code>    compdf "Final pdf name" "coverpage.pdf hesc10?.pdf hesc11?.pdf hesc1an.pdf"
-</code></pre>
-
-<p>e.g.</p>
-
-<pre><code>    compdf "9th-Science-Problems.pdf" "ieep1cc.pdf ieep1ps.pdf ieep10?.pdf ieep11?.pdf ieep1a?.pdf"
-</code></pre>
-
-<p><em>jpg2pdf</em> is required as compdf can only merge pdfs and some coverpages are given in jpg files. so you will need to convert them to pdf.</p>
-
-<p>usage:</p>
-
-<pre><code>    jpg2pdf JPEG-Filename.jpg PDF-Filename.pdf 
-</code></pre>
-
-<p><em>Note, most probably the jpg2pdf will error out on your computer because of the location of the viewjpeg.ps file on your computer. It will be different on your computer so use locate or find to find this file and then replace the path to that file in the jpg2pdf script.</em></p>
-
-<p>These both tools are also added in the scripts folder of the project.</p>
-
-<p>I used these tools and have uploaded a few textbooks, mostly those relevant to the UPSC civil services examinations.So folks who are preparing for it, can download the complete textbooks from this website.</p>
-
-<h2>Plea to contribute</h2>
-
-<p>While I was creating this, I realised that this is a good way of trying to provide a way for people to easily download pdf files directly to their computers, without having to worry about merging the pdfs etc. I have provided you with all the tools you will need, in the scripts folder.</p>
-
-<p>If you have some time, rather than wasting it on tv, <a href="http://www.forbes.com/sites/jessicahagy/2011/11/30/how-to-be-interesting/">make yourself interesting</a> use it to contribute to this project. Your efforts would be greatly appreciated by the millions of kids in India who will be helped by this deed of yours.</p>
-
-<p>If you have unmerged pdf files, you can also contribute by uploading them to the directory called &#8220;unmerged&#8221;. I will merge them as soon as I can.</p>
-
-<h4>A note about copyrights</h4>
-
-<p>All copyright belongs to NCERT. I only function as a facilitator and do not own any copyright. We thank NCERT for making these textbooks available in the public domain.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/05/SSH-Complete-Guide-keys-connections/">SSH - Complete Guide, Keys, Passwords & Connect</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-05T00:00:00+01:00" pubdate data-updated="true">Jan 5<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/01/05/SSH-Complete-Guide-keys-connections/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Why bother? The bother is that people are listening. Everyone from your prying neighbour, your ISP, your country and crackers and botnets are all listening to your traffic. Everytime you connect to a server online either through ftp, http, telnet etc. your login information and other information can be read by listeners since they arent encrypted. To overcome this, enter ftps, https and <em>ssh</em>.</p>
-
-<p>SSH is a safe way of connecting, copying files and authenticating with a server online. You can generate your public key and let the server know your public key. By doing this, everytime you connect to the server, the server knows that the person connecting is you. You are the only person who can decrypt the public key with your private key that always only stays on your computer.</p>
-
-<h2>Generating SSH keys</h2>
-
-<p>On a linux/unix like machine (yes a mac too) run this</p>
-
-<pre><code>ssh-keygen -t rsa -C "your_email@youremail.com"
-</code></pre>
-
-<p>This will prompt you for a passphrase. You could use one to be safe, so that if someone gets access to your private key, they cannot take advantage of it.</p>
-
-<p>This will create two files</p>
-
-<pre><code>~/.ssh/id_rsa (your private key) 
-</code></pre>
-
-<p>and</p>
-
-<pre><code>~/.ssh/id_rsa.pub (your public key)
-</code></pre>
-
-<p>Keep your private key safe. The public key you can give away ;)</p>
-
-<h2>Passwordless Authentication</h2>
-
-<p>For a server that you used to login into, use the keys above to enable passwordless authentication.</p>
-
-<pre><code>$ cat ~/.ssh/id_rsa.pub 
-</code></pre>
-
-<p>This will output something similar to this</p>
-
-<pre><code>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEArkwv9X8eTVK4F7pMl 
-St45pWoiakFkZMw G9BjydOJPGH0RFNAy1QqIWBGWv7vS5K2tr+EEO+F8WL2Y 
-jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
-+YKEyVUMB2CSDOP99eF9g5Q0d+1U2WVdB WQM=raman@ramantePC
-</code></pre>
-
-<p>It is one line in length.</p>
-
-<p>Login into your server the normal way and then copy this one line into .ssh/authorized_keys file using the following</p>
-
-<pre><code>echo [your public_key] &gt;&gt; .ssh/authorized_keys
-</code></pre>
-
-<p>Thats it. Now log off and try ssh into your server again.</p>
-
-<h2>ServerKeepAlive to maintain SSH Connections</h2>
-
-<p>Now that you are using ssh to connect yo your online server, you would have probably noticed how often ssh connections times out. This is because of one variable <strong>ServerAliveInterval</strong> in one of these files:</p>
-
-<pre><code>/etc/sshd_config  or /etc/ssh/sshd_config
-</code></pre>
-
-<p>That&#8217;s how often, in seconds, ssh will send a keepalive request to the other end of the connection. Now, I have found that at the servers, this value is usually set at 60. Setting your client machine to a value less than 60, like e.g. 45 is enough to make sure that there would be no idle timeout.</p>
-
-<p>This is relatively safe cos as long as your client computer is on, the connection is alive. The moment it goes to sleep or is shutdown, the connection is lost.</p>
-
-<h2>ssh-agent, the true passwordless wonder</h2>
-
-<p>ssh-agent is considered a more safer way of connecting to servers as there are critics about the passwordless mechanism explained earlier. This is because of the vulnerability of having a file physically on your computer, that might get stolen etc. I haven&#8217;t  delved into it much, but <a href="http://mah.everybody.org/docs/ssh">this seems like a good link</a> for those who want to try it.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
   </div>
-</div>
-<aside class="sidebar">
+
+
+  <!-- include asides.html -->
   
-    <section>
+  <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
@@ -553,13 +161,18 @@ jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
   </ul>
 </section>
 
+
 <section>
-  <h1>GitHub Repos</h1>
+  <h2>
+    Git リポジトリ 
+    &mdash;
+    <a href="https://github.com/avallark">GitHub</a>
+  </h2>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">読込中 &#8230;</li>
   </ul>
   
-  <a href="https://github.com/avallark">@avallark</a> on GitHub
+  <a href="https://github.com/avallark">@avallark</a> on Github
   
   <script type="text/javascript">
     $.domReady(function(){
@@ -583,10 +196,15 @@ jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
 </section>
 
 
+
 <section>
-  <h1>Latest Tweets</h1>
+  <h2>
+    最近のつぶやき 
+    &mdash;
+    <a href="http://twitter.com/avallark">twitter</a>
+  </h2>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">読込中 &#8230;</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -595,7 +213,7 @@ jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>
   
-    <a href="http://twitter.com/avallark" class="twitter-follow-button" data-show-count="true">Follow @avallark</a>
+    <a href="http://twitter.com/avallark" class="twitter-follow-button" data-width="208px" data-show-count="true">Follow @avallark</a>
   
 </section>
 
@@ -612,24 +230,36 @@ jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
 
 
 
-  
-</aside>
 
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
+
+
+  <!-- /include asides.html -->
+
+</div>
+
+</div>
+
+	<!-- /content -->
+      </div>
+
+      <footer role="contentinfo">
+	<!-- include footer -->
+	<p>
   Copyright &copy; 2012 - Bijur Vallarkodath -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
-</footer>
-  
+	<!-- /include -->
+      </footer>
+      
+      <!-- include after_footer -->
+      
 
 <script type="text/javascript">
       var disqus_shortname = 'bijur-in';
       
-        
-        var disqus_script = 'count.js';
+	
+	var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -653,9 +283,11 @@ jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
 
   <script type="text/javascript">
     (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      var script = document.createElement('script');
+      script.type = 'text/javascript'; script.async = true;
       script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(script, s);
     })();
   </script>
 
@@ -674,6 +306,8 @@ jK4ZkUoQgoi+n7DWQVOHsRijcS3LvtO+50Np4yjXYWJKh29JL6GHcp8o7
 
 
 
+      <!-- /include -->
 
-</body>
+    </div>
+  </body>
 </html>
