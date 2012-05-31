@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: clojure, | My work and thoughts]]></title>
+  <title><![CDATA[Category: clojure, | Bijur Vallarkodath]]></title>
   <link href="http://avallark.github.com/blog/categories/clojure-/atom.xml" rel="self"/>
   <link href="http://avallark.github.com/"/>
-  <updated>2012-05-31T23:02:44+02:00</updated>
+  <updated>2012-05-31T23:05:47+02:00</updated>
   <id>http://avallark.github.com/</id>
   <author>
     <name><![CDATA[Bijur Vallarkodath]]></name>
