@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Internet Security - Keeping your family safe on the internet - Bijur Vallarkodath</title>
+  <meta name="author" content="Bijur Vallarkodath">
+
+  
+  <meta name="description" content="This is a layman's gudie, although the average geek could also skim through to directly use the commands given below. This is Mac/Linux only. If you &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://avallark.github.com/blog/2011/12/28/Must-know-Internet-Security-Keeping-your-family-safe">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Bijur Vallarkodath" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Bijur Vallarkodath</a></h1>
+  
+    <h2>The force is strong in this one</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:avallark.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Internet Security - Keeping Your Family Safe on the Internet</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T00:00:00+01:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This is a layman's gudie, although the average geek could also skim through to directly use the commands given below.</p>
+
+<p>This is Mac/Linux only. If you are using MS windows, you should either switch to one of these, or if you can't I will specifically mention if the feature is available on windows or not</p>
+
+<h2>Introduction</h2>
+
+<p>You do not display your ATM pin to anyone when you type them, nor do you yell out personal things in public. You dont tell your parents, neighbors and cops of every place you have been to, nor do you publicize to your entire friends network all the things you have ever done. Yes in real life, privacy, security and personal space is very important to you. Why ignore it online?</p>
+
+<p>There are plenty of tools currently avaiable now in the market that are now capable of listening to you, understanding which websites or what data you are sending across and store it for later use. The information thus extracted can be used later to search not only for financial information, but also personal information like national ID number, social security number, Name, Age, Date of birth, security information you give on websites, your email, facebook or twitter usernames and passwords etc.</p>
+
+<p>Imagine someone has access to your facebook, email or twitter accounts. With the information thats available on these websites, they can access any of your bank account, user account  of any website, even if they do not know your username or password. If they click on "Forgot your password" on most of these websites, they will be able to easily answer all the security questions by simply listening to your internet traffic.  This can now be done for any of the services you get online, which nowadays is <em>everything significant in your life</em>, maybe except for your weekly haircut or pedicure!</p>
+
+<p>We are living in an internet age, everyone has access to everything. Your data along with billions of other people's data is stored on servers millions of kilometers from where you live. These servers are prone to attacks and are succeptible. Recent examples of the <em>Sony Playstation Networks</em> servers getting cracked is just one example. Upto 74 million user profile information, credit card information, security questions and identities fell into the wrong hands.</p>
+
+<p>In this book, we will cover the different aspects of online security that you should follow to stay safe in this new largely misunderstood world.</p>
+
+<p>We will cover the following aspects of security.</p>
+
+<ul>
+<li><p> Understanding security basics</p>
+
+<p> Computers, Operating systems, Internet, Networking, Identity, Security</p></li>
+<li><p> Encrypting your communication</p>
+
+<p> Using SSL/TLS to protect yourself</p></li>
+<li><p> Safer Browsing</p>
+
+<p> Anonymous browsing, DNS, Open DNS, Encrypting DNS and why?</p></li>
+<li><p> Transactions online</p>
+
+<p> Paypal, Virtual Creditcards, Phishing</p></li>
+<li><p> At home security</p>
+
+<p> Securing your wifi, using LAN</p></li>
+</ul>
+
+
+<h2>Understanding Security - basics</h2>
+
+<p>"You do not have to be a geek to know that you need a browser to access the internet" - The IT Crowd</p>
+
+<p>When you go to a foreign land, you read up  about the place, how to travel, what is safe to eat, where to stay etc. To keep yourself safe and to make sure you have most fun, you need to first know what you are dealing with. When you are talking about  how to keep yourself safe in the online world, you have to understand the basics of life on the internet world also. Seldom, people take the time to understand what a browser is, or what is happening when you access an internet website. Computers are so cheap and the content on the internet is so attractive that people just dive right in without understanding what the risks are.</p>
+
+<h3>Computers</h3>
+
+<p>A computer is any device that calculates and can execute your commands. Thus, technically, from a small calculator to the device that controls the temperature automatically in your car are all computers. Here, we will talk about the laptops, desktops and similar computers that we use and refer to as computers in our daily life.</p>
+
+<p>A computer has an output, input and a processing brain. Monitors/screens and printers are the output devices. Keyboard, mouse/trackpad are the input devices. The circuits inside the computer/laptop form the central processing unit which takes in all input and processes them into desired output for you.</p>
+
+<h3>Operating Systems</h3>
+
+<p>An operating system is the software that runs your computer. This is the software on top of which you install all your other applications like iPhoto, Internet Explorer, Chrome, Safari, iTunes etc. Windows, Linux and Mac OSX are examples of operating systems. When you start a computer, the first thing that starts up is the Operating system.</p>
+
+<p>Each software that you install on your computer thus must run on your operating system. Thus each software needs to be specially made for each different operating system. This is why you cannot install an iPhoto on your Windows computer or install Internet Explorer on your Mac. Providers of applications now try to make a different version of each program available that can be installed on a Mac or a Windows computer. Typically the filename for the software for a Mac would end with .dmg or .pkg while that for Windows would end with .exe or .msi.</p>
+
+<p>.. comments and feedback welcome.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Bijur Vallarkodath</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T00:00:00+01:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avallark.github.com/blog/2011/12/28/Must-know-Internet-Security-Keeping-your-family-safe/" data-via="avallark" data-counturl="http://avallark.github.com/blog/2011/12/28/Must-know-Internet-Security-Keeping-your-family-safe/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/12/28/iPads-n-Tablets-to-enrich-in-class-learning-experience/" title="Next Post: iPads & Tablets to enrich in-class learning experience">iPads & Tablets to enrich in-class learning experience &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/05/31/clojure-on-mac-and-emacs/">Clojure on Mac &amp; Emacs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/28/upgrading-from-jekyll-to-octopress/">Upgrading from Jekyll to Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/06/Mobile-communications-primer/">Mobile communications primer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/">NCERT Textbooks in a download friendly format.</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/05/SSH-Complete-Guide-keys-connections/">SSH - Complete Guide, keys, passwords & connect</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/avallark">@avallark</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'avallark',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("avallark", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/avallark" class="twitter-follow-button" data-show-count="true">Follow @avallark</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/bijur@grep-i.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Bijur Vallarkodath -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bijur-in';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

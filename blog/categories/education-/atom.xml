@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: education, | Bijur Vallarkodath]]></title>
+  <link href="http://avallark.github.com/blog/categories/education-/atom.xml" rel="self"/>
+  <link href="http://avallark.github.com/"/>
+  <updated>2012-06-20T20:53:26+02:00</updated>
+  <id>http://avallark.github.com/</id>
+  <author>
+    <name><![CDATA[Bijur Vallarkodath]]></name>
+    <email><![CDATA[bijur@grep-i.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NCERT Textbooks in a download friendly format.]]></title>
+    <link href="http://avallark.github.com/blog/2012/01/06/NCERT-TextBooks-download-friendly-format/"/>
+    <updated>2012-01-06T00:00:00+01:00</updated>
+    <id>http://avallark.github.com/blog/2012/01/06/NCERT-TextBooks-download-friendly-format</id>
+    <content type="html"><![CDATA[<p>First things first, the <a href="https://github.com/avallark/NCERT-TextBooks">Project is available on Github</a>.</p>
+
+<p>A friend of mine was preparing for the UPSC services examination and he asked my help to locate the NCERT textbooks as that is a good place to start preparing. I found the NCERT website quite fast, but found out that downloading these files from the website is a pain. They make each chapter a separate pdf and cover pages jpg formats. All in all you have to download 20 files if you want to read a text book.</p>
+
+<p>Thus, I started a project so as to unify these pdf files into a single more human-form pdf. The pdf would thus be a complete ebook for one subject of NCERT. To do this, I needed three things</p>
+
+<ul>
+<li>a tool to download these files easily : wget</li>
+<li>a tool to combine these pdfs into a single file : gs (ghostscript)</li>
+<li>a tool to convert jpg to pdfs : ghostscript/ImageMagik</li>
+</ul>
+
+
+<p>All these tools are free open source tools that can be used. So I created two scripts jpg2pdf and compdf to ease their usage.</p>
+
+<p><em>compdf</em> takes in two arguments, 1st is the final pdf name e.g. 8th-Maths.pdf, and the second is the list of pdf file to be merged. The order that is given here is important.</p>
+
+<p>usage:</p>
+
+<pre><code>    compdf "Final pdf name" "coverpage.pdf hesc10?.pdf hesc11?.pdf hesc1an.pdf"
+</code></pre>
+
+<p>e.g.</p>
+
+<pre><code>    compdf "9th-Science-Problems.pdf" "ieep1cc.pdf ieep1ps.pdf ieep10?.pdf ieep11?.pdf ieep1a?.pdf"
+</code></pre>
+
+<p><em>jpg2pdf</em> is required as compdf can only merge pdfs and some coverpages are given in jpg files. so you will need to convert them to pdf.</p>
+
+<p>usage:</p>
+
+<pre><code>    jpg2pdf JPEG-Filename.jpg PDF-Filename.pdf 
+</code></pre>
+
+<p><em>Note, most probably the jpg2pdf will error out on your computer because of the location of the viewjpeg.ps file on your computer. It will be different on your computer so use locate or find to find this file and then replace the path to that file in the jpg2pdf script.</em></p>
+
+<p>These both tools are also added in the scripts folder of the project.</p>
+
+<p>I used these tools and have uploaded a few textbooks, mostly those relevant to the UPSC civil services examinations.So folks who are preparing for it, can download the complete textbooks from this website.</p>
+
+<h2>Plea to contribute</h2>
+
+<p>While I was creating this, I realised that this is a good way of trying to provide a way for people to easily download pdf files directly to their computers, without having to worry about merging the pdfs etc. I have provided you with all the tools you will need, in the scripts folder.</p>
+
+<p>If you have some time, rather than wasting it on tv, <a href="http://www.forbes.com/sites/jessicahagy/2011/11/30/how-to-be-interesting/">make yourself interesting</a> use it to contribute to this project. Your efforts would be greatly appreciated by the millions of kids in India who will be helped by this deed of yours.</p>
+
+<p>If you have unmerged pdf files, you can also contribute by uploading them to the directory called "unmerged". I will merge them as soon as I can.</p>
+
+<h4>A note about copyrights</h4>
+
+<p>All copyright belongs to NCERT. I only function as a facilitator and do not own any copyright. We thank NCERT for making these textbooks available in the public domain.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Choosing a Learning Management System]]></title>
+    <link href="http://avallark.github.com/blog/2012/01/04/Choosing-a-Learning-Management-System/"/>
+    <updated>2012-01-04T23:21:00+01:00</updated>
+    <id>http://avallark.github.com/blog/2012/01/04/Choosing-a-Learning-Management-System</id>
+    <content type="html"><![CDATA[<p>The Education strategy of a school would involve various products, solutions that are to be pieced together in harmony to provide a seamless education experience for students and professors. The complete solution and design would depend on the learning strategy and how professors decide that they need to teach.</p>
+
+<p>The first step into designing and implementing a new LMS is what learning strategy we need to follow for our courses within a school.</p>
+
+<p>Selecting a LMS should be done only after answering these three questions.</p>
+
+<ol>
+<li>Why is a new LMS being considered(i.e., new to eLearning, outgrown the current system, outdated or lack of functionality, too expensive, dissatisfied with vendor)?</li>
+<li>What are the key issues, problems and/or challenges your institution hopes to address with a new LMS?</li>
+<li>Have the staff and budget associated with the task of selecting, implementing, supporting and maintaining a new LMS been identified and earmarked.</li>
+</ol>
+
+
+<p>Learning Strategy
+1. How we plan to deliver programs
+2. New learning processes?
+3. Success and ROI of LMS
+4. Pedagogical approaches and models of the institution</p>
+
+<h2>Why is a new LMS being considered?</h2>
+
+<p>We must address the following with this new LMS</p>
+
+<ol>
+<li>Course management for Faculty &amp; Students.</li>
+<li>As a means to deliver content digitally to students</li>
+<li>Mobile Learning capabilities</li>
+<li>Ability to integrate with our planning systems.</li>
+<li>Ability to do distance learning and eLearning effectively.</li>
+<li>Simulations and Aids to teaching</li>
+</ol>
+
+
+<h2>Course management for Faculty and students</h2>
+
+<p>The current solution of Global campus using sharepoint leaves much to be desired. The concerns are</p>
+
+<ol>
+<li>There are over 800 live independant sites on sharepoint for Global campuses with no central control</li>
+<li>Usability of content is very low</li>
+<li>Cost of redesigning and recreating a new sharepoint site is very high and this cost climbs each year with more custom programs.</li>
+<li>Integrations with back end systems like faculty planner is virtually non-existent and any efforts currently is quite expensive.</li>
+<li>Faculty (and also students) have to navigate through a series of links before finally arriving at a relevant course page.</li>
+</ol>
+
+
+<p>Apart from resolving the issues of the current platform, we need the following features to be more productive and usable.</p>
+
+<ol>
+<li>Accessibilty from multiple devices invluding, iOS, Android, Mac, Windows, Linux etc.</li>
+<li>Ability to do distance learning or eLearning effectively
+Traditionally we have been a program with a heavy focus on in-person training. Case based methodology to a big extent requires this.</li>
+</ol>
+
+
+<p>We have distance learning modules focused on conducting a case based discussion using newsgroups. The newsgroups had several significant considerations:</p>
+
+<ol>
+<li>Replicate classroom discussions on an online asynchronous platform.</li>
+<li>Discussion should persist over a period of time</li>
+<li>Having prolonged discussions gives an opportunity for everyone to participate</li>
+<li>This helps professors to get to know students and if needed give individual help to them.</li>
+<li>Gives an opportunity to understand and thus help students who do not participate much in class.</li>
+<li>Ability to share links and contents and other attachments with students</li>
+<li>Possibility of different boards for different topics gives the ability to discuss different things in different places making sure that content is well organized.</li>
+<li>Every class and every case has its own board</li>
+<li>Nested replies and multi-level threads are great. It also allows two people to argue/debate something out, without hindering others (unlike a class discussion)</li>
+<li>The newsgroups are significant investment of professor time.</li>
+</ol>
+
+
+<p>Thus, eLearning platforms, must strive to enable an offline classroom discussions and help aid in the case based methodology that a school is built on.</p>
+
+<p>Distance learning platforms should also be quick courses we could deliver as a course pills. With its own Content and (maybe) and exam to verify appropriateness. These are especially attractive for soft skill course like Company Ethics etc. Quick course in Accounting principles of quantitative methods. These pills could contain multimedia material, video, audio and text along with an interactive element attached to it.</p>
+
+<p>As means to deliver content digitally to students
+With the flourish of Mobile and table devices with incredible capabilities which are carried around by users (students, staff, faculty) wherever they go, delivering materials digitally is a no-brainer.</p>
+
+<p>An LMS should enable the distribution of content digitally to users in a way such that relevant content is delivered through an open protocol to students. The following contents should be covered:</p>
+
+<ol>
+<li>Cases</li>
+<li>Technical Notes</li>
+<li>Case supplemental videos</li>
+<li>Other reading material.</li>
+<li>Annexes of cases</li>
+<li>Exercises and assignments.</li>
+</ol>
+
+
+<h2>The LMS should allow the following</h2>
+
+<ol>
+<li>a school Back-office staff to upload and organize the content integrated with the current systems that are used to deliver content.</li>
+<li>Professors should need to update any content on their sessions at any time to allow flexibility. e.g. new article in today’s newspaper, change in case etc.</li>
+<li>Relevant content access. People with the right permissions can update, create content for courses.</li>
+</ol>
+
+
+<h2>Improved usability in our course management systems</h2>
+
+<p>Usability should be a key aspect for a Learning management systems.</p>
+
+<p>The LMS should be platform independent for users. Access should be available with more or less same functionality with the following devices</p>
+
+<ol>
+<li>Windows PC</li>
+<li>Mac OSX</li>
+<li>Linux</li>
+<li>Android Phones &amp; Tablet</li>
+<li>iOS Phones and Tablets</li>
+</ol>
+
+
+<p>The LMS should ensure compatibility and elegant delivery on the following browsers</p>
+
+<ol>
+<li>Firefox</li>
+<li>Google Chrome</li>
+<li>Safari</li>
+<li>Internet Explorer 9+</li>
+</ol>
+
+
+<h2>Mobile Learning Capabilities</h2>
+
+<p>“Learning that happens across locations, or that takes advantage of learning opportunities offered by portable technologies”</p>
+
+<h3>Key capabilities in mobile can involve:</h3>
+
+<ol>
+<li>Delivery of learning materials, including transcripts, audio or videos of lectures for review. (Integration of LMS having a mobile ui)</li>
+<li>Self-assessment and quiz aids</li>
+<li>Access to assignments and syllabi</li>
+<li>Creation of user generated content for sharing or later referral</li>
+<li>Campus tours or navigation and resources</li>
+<li>Access to grades</li>
+<li>Registration for classes</li>
+<li>In-class audience response and polling</li>
+<li>Access to faculty and fellow students</li>
+<li>Easy access to coaches, mentors and tutors</li>
+<li>Social networking, such as blogs, Facebook or Twitter</li>
+<li>Campus information - contacts, emergency exits, security contacts</li>
+<li>eBook Reader</li>
+</ol>
+
+
+<p>Examples of use of social networks like facebook/twitter or socialcast.</p>
+
+<ol>
+<li>A professor in accounting can post an accounting problem and the first to give a solution would get extra points.</li>
+<li>Professors and program coordinators can use this for course and class announcements.</li>
+</ol>
+
+
+<h3>Important questions to answer</h3>
+
+<ol>
+<li>How could faculty use mobile capabilities to enhance classroom learning?</li>
+<li>What capabilities would be of interest to students and prospective students?</li>
+<li>How can ubiquitous and asynchronous connectivity better enable faculty and student interaction?</li>
+<li>What campus services will help students be more productive or safe?</li>
+<li>What materials are already on hand that could be made easier to access via mobile devices? Does content already exist in another form?</li>
+<li>What network will be used for distribution? What actions or activities will need to be tracked?</li>
+<li>What mobile tools will the student be using upon graduation that they should gain experience with now?</li>
+<li>How will mobile learning integrate with other systems on our campus or does it need to?</li>
+<li>Who will handle any needed user support?</li>
+<li>Are there partners or potential funders for our initiative?</li>
+<li>How will this new opportunity be communicated/marketed?
+Simulations and other aids to teaching
+Simulations are used to aid teaching in various courses. Examples include the beer game, ipade project etc.</li>
+</ol>
+
+
+<p>Current Identified needs include the following:
+1. Simulation of the Beer Game.
+2. In Company Projects, off-campus classes etc.</p>
+
+<h2>Key Issues at a school we want to tackle</h2>
+
+<p>Issues we need to consider</p>
+
+<ol>
+<li>Security for our content.</li>
+<li>Content have to be always:</li>
+<li>Password protected</li>
+<li>Contain a social watermark (e.g. “This content is delivered to MBA 2010 - Section B”)</li>
+<li>Ease of access through multiple platforms, through open protocols</li>
+<li>Ability to let consumerism take its way. Let the open market guide users to selecting applications they prefer.</li>
+</ol>
+
+
+<h1>Integrations</h1>
+
+<p>We need to be able to customize php applications and use them integrated with blackboard. Embed php applications.</p>
+
+<p>Third party applications include, webex, apple, etc.</p>
+]]></content>
+  </entry>
+  
+</feed>
